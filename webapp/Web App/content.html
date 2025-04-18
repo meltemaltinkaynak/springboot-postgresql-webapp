@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Tasarımı Kategorisi</title>
+    <link rel="stylesheet" href="styles/navbar.css" />
+    <link rel="stylesheet" href="styles/content.css" />
+    <link rel="stylesheet" href="styles/toast.css" />
+
+    <script src="dynamic-content.js" defer></script>
+  </head>
+  <body>
+    <nav class="navbar">
+      <!-- Logo -->
+      <div class="logo">
+        <a href="#">WebDesignPro</a>
+      </div>
+
+      <!-- Menü ve Arama Çubuğu -->
+      <div class="container">
+        <ul class="nav-links">
+          <li><a href="#">Ana Sayfa</a></li>
+          <li><a href="#">Web Tasarımı</a></li>
+          <li>
+            <a href="#">Web Geliştirme</a>
+            <ul>
+              <li>
+                <a href="#">Frontend</a>
+                <ul>
+                  <li><a href="#">HTML</a></li>
+                  <li><a href="#">CSS</a></li>
+                  <li><a href="#">JavaScript</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">Backend</a>
+                <ul>
+                  <li><a href="#">Veri Tabanları</a></li>
+                  <li><a href="#">Backend Teknolojileri</a></li>
+                  <li><a href="#">API Geliştirme</a></li>
+                  <li><a href="#">Sunucu ve Hosting</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><a href="#">UI/UX</a></li>
+          <li><a href="#">Tasarım Araçları</a></li>
+          <li><a href="#">Web Performansı ve SEO</a></li>
+          <li><a href="#">Web Güvenliği</a></li>
+          <li><a href="GirisYap.html">Giriş Yap</a></li>
+          <li><a href="KayitOl.html">Kayıt Ol</a></li>
+        </ul>
+
+        <div class="search-bar">
+          <input type="text" placeholder="Ara..." />
+          <button>ARA</button>
+        </div>
+      </div>
+    </nav>
+    <div class="content-container">
+      <h1>Web Tasarımı Kategorisindeki İçerikler</h1>
+      <div id="content-list">
+        <!-- İçerikler buraya eklenecek -->
+      </div>
+    </div>
+    
+    <!-- JavaScript Dosyası -->
+    <script src="js/navbar.js" defer></script>
+    <script src="js/content.js"></script>
+    <script src="js/toast.js" defer></script>
+
+    <!-- Toast Bildirimi -->
+    <div id="toast" class="toast"></div>
+  </body>
+</html>

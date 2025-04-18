@@ -1,0 +1,300 @@
+/* Giriş Yap Sayfası */
+.main-login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(to right,  #353536, #eff2f5);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: 1;
+}
+
+/* Glass Container */
+.main-login .glass-container {
+  width: 500px;
+  height: 350px;
+  position: relative;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  border: 1px solid #ffffff;
+}
+
+/* Blur Efekti */
+.main-login .glass-container::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  z-index: -1;
+}
+
+/* Login Box */
+.main-login .login-box {
+  max-width: 250px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.main-login h2 {
+  color: #ffffff;
+  margin-top: 30px;
+  margin-bottom: -20px;
+}
+
+.main-login form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.main-login form input {
+  padding: 10px;
+  margin-top: 25px;
+  border: none;
+  border-radius: 10px;
+  background: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+  font-size: 13px;
+}
+
+.main-login form input::placeholder {
+  color: #fff;
+  font-size: 10px;
+}
+
+.main-login form input:focus {
+  outline: none;
+}
+
+
+/* Checkbox */
+.main-login .options {
+  display: flex;
+  
+  align-items: center;
+  margin-top: 14px;
+  font-size: 11px;
+  color: white;
+}
+
+.main-login .options input {
+  margin-right: 5px;
+  margin-top: 0px;
+}
+
+.main-login .options a {
+  text-decoration: none;
+  color: white;
+  margin-left: auto;
+}
+
+.options input[type="checkbox"] {
+  width: 12px;
+  height: 12px;
+  cursor: pointer;
+  accent-color: #000000; 
+  vertical-align: middle; /* Checkbox'ı metinle aynı hizaya getir */
+}
+
+
+/* Buton*/
+
+.main-login button {
+  background: #000000;
+  color: rgb(255, 255, 255);
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+.main-login button:hover {
+  background: rgb(29, 28, 28);
+  color: #ffffff;;
+  outline: 1px solid #fff;
+}
+
+.main-login p {
+  font-size: 12px;
+  color: #fff;
+  margin-top: 15px;
+}
+
+.main-login #register {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+}
+
+
+
+
+/* eye icon */
+
+.password-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.password-container input {
+  width: 100%;
+  padding-right: 40px; /* İkonun giriş kutusuna taşmasını önler */
+}
+
+.toggle-password {
+  position: absolute;
+  right: 10px;
+  top: 55%;  /* Üst kenardan %50 yukarı koy */
+  cursor: pointer;
+  filter: brightness(0) invert(1); /* Siyah ikonu beyaza çevirir */
+}
+
+.toggle-password img {
+  width: 20px;
+  height: 20px;
+}
+
+
+.error-message {
+  color: rgb(140, 37, 37); /* Yazı rengini kırmızı yapar */
+  font-size: 10px; /* Yazı boyutunu küçültür */
+  margin-top: 5px; /* Üstten biraz boşluk bırakır */
+  display: block; /* Elemanı blok seviyesinde gösterir */
+  text-align: left; /* Sola yaslar */
+  width: 100%; /* Genişliği tam olarak ayarlar */
+}
+
+
+
+
+
+
+/* Responsive Design */
+/* Mobile Devices (375px and below) */
+@media (max-width: 375px) {
+  .main-login .glass-container {
+    width: 90%; /* Daha geniş yapalım */
+    height: auto; /* Yüksekliği içerik ile orantılı yapalım */
+    padding: 20px; /* İçeriğe biraz boşluk ekleyelim */
+  }
+
+  .main-login .login-box {
+    max-width: 100%;
+    padding: 15px;
+  }
+
+  .main-login h2 {
+    font-size: 1.5rem;
+    margin-top: 15px;
+  }
+
+  .main-login form input {
+    font-size: 14px;
+    padding: 12px;
+  }
+
+  .main-login button {
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  .main-login .options {
+    font-size: 14px;
+  }
+
+  .main-login p {
+    font-size: 14px;
+  }
+}
+
+/* Tablet Devices (768px and below) */
+@media (max-width: 768px) {
+
+  .main-login .glass-container::before {
+    backdrop-filter: none; /* Blur efektini tamamen kaldır */
+    -webkit-backdrop-filter: none;
+  }
+
+  .main-login .glass-container {
+    width: 75%; /* Genişlik %85'e indirildi */
+    height: auto;
+    padding: 25px; /* İçeriğe biraz daha boşluk ekleyelim */
+  }
+
+  .main-login .login-box {
+    max-width: 100%;
+    padding: 20px;
+  }
+
+  .main-login h2 {
+    font-size: 1.7rem;
+    margin-top: 20px;
+  }
+
+  .main-login form input {
+    font-size: 15px;
+    padding: 12px;
+  }
+
+  .main-login button {
+    padding: 12px;
+    font-size: 15px;
+  }
+
+  .main-login .options {
+    font-size: 14px;
+  }
+
+  .main-login p {
+    font-size: 14px;
+  }
+}
+
+/* Small Desktop Devices (1024px and below) */
+@media (max-width: 1024px) {
+
+  .main-login .glass-container::before {
+    backdrop-filter: none; /* Blur efektini tamamen kaldır */
+    -webkit-backdrop-filter: none;
+  }
+
+  .main-login .glass-container {
+    width: 75%; /* Daha geniş yapalım */
+    height: auto;
+    padding: 30px; /* İçeriğe genişlik ekleyelim */
+  }
+
+  .main-login h2 {
+    font-size: 1.8rem;
+  }
+
+  .main-login form input {
+    font-size: 16px;
+    padding: 14px;
+  }
+
+  .main-login button {
+    padding: 14px;
+    font-size: 16px;
+  }
+
+  .main-login .options {
+    font-size: 15px;
+  }
+
+  .main-login p {
+    font-size: 15px;
+  }
+}
+

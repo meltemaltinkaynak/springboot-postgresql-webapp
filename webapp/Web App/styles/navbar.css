@@ -1,0 +1,681 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #c4c4c4;
+   
+    
+}
+
+/* Navbar */
+.navbar {
+    background: linear-gradient(90deg, #5b5959, #4c4c4d, #9e9d9f, #525152);
+    padding: 20px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Sola ve sağa yerleştirme */
+    width: 100%;
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    box-shadow: 0px 8px 48px rgba(0, 0, 0, 0.5); /* Gölge ekleme */
+ }
+
+
+
+/* Kullanıcı Bilgisi (Sağda) */
+.user-info {
+    position: absolute;
+    right: 10px; /* Sağ tarafta olacak */
+}
+
+/* Logo ve isim */
+.logo a {
+    display: flex;
+    align-items: center; 
+    text-decoration: none;
+    color: white;
+    font-size: 1.5rem; 
+    font-weight: bold; 
+}
+
+
+.logo img {
+    width: 80px; 
+    height: auto;
+    margin-right: 20px;
+    filter: brightness(0) saturate(100%) invert(100%); 
+}
+
+.logo a span {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffffff;
+    margin-left: 2px; /* Görselle metin arasında boşluk */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: color 0.3s ease;
+}
+
+.logo a:hover span {
+    color: #ffffff; /* Hover durumunda renk değişimi */
+}
+
+/* Navbar İçeriği */
+.container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Nav Linkler */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
+    gap: 20px;
+    
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.95rem;
+    padding: 8px 12px; 
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    font-size: 12px;
+}
+
+.nav-links li a.active, 
+.nav-links li a:hover { 
+    background-color: #4b4949;
+}
+
+
+/* Açılır Menüler */
+.nav-links .dropdown {
+    position: relative;
+}
+
+.nav-links .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 41px;
+    left: 0;
+    background-color: #2c2b2b;
+    list-style: none;
+    padding: 20px;
+    width: 220px;
+    z-index: 1000;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    opacity: 0;
+    visibility: hidden;
+    
+}
+
+.nav-links .dropdown.active > .dropdown-menu {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+}
+
+
+.dropdown-menu .dropdown-submenu {
+    display: none;
+    background-color: #2c2b2b;
+    border-radius: 4px;    
+    padding: 20px;
+    width: 180px;
+    top: 5px;
+    
+    
+}
+
+
+
+.dropdown-menu .dropdown-submenu.show {
+    display: block;
+}
+
+.dropdown-menu li:hover > .dropdown-submenu,
+.dropdown-menu li.active > .dropdown-submenu {
+    display: block;
+}
+
+.nav-links .dropdown-menu li {
+    margin-bottom: 15px; 
+    font-size: 12px;
+    
+}
+
+
+.nav-links .dropdown-menu li:last-child {
+    margin-bottom: 0;    
+
+}
+
+/* Menüler Arası geçiş */
+.nav-links li:hover > ul {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Z-index ile Üst Üste Binme Sorunu */
+.nav-links, .dropdown-menu, .dropdown-submenu {
+    z-index: 1001;
+}
+
+/* Web Geliştirme ve Alt Menüler için Transition */
+.dropdown-menu li a:hover {
+    background-color: #595959;
+}
+
+
+/* Arama Çubuğu */
+
+.search-bar {
+    display: flex;
+    gap: 0.5px;
+    
+}
+
+.search-bar input {
+    padding: 2px 6px;
+    border: 2px solid rgb(68, 67, 67); 
+    border-radius: 4px;
+    color:rgb(21, 20, 20) ;
+    width: 150px;
+    background-color: transparent;
+    
+}
+.search-bar input::placeholder {
+    color: rgb(27, 26, 26);
+    opacity: 1; 
+}
+
+.search-bar button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0; 
+    height: 100%;
+}
+
+.search-bar .search-icon {
+    width: 30px; 
+    height: 30px; 
+    object-fit: contain; 
+    display: block; 
+    cursor: pointer;
+    fill: gray;
+}
+
+.search-bar button:hover {
+    background-color: transparent;
+}
+
+
+/* Notification ikonu stili */
+.notification-icon {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+    background-color: transparent; 
+    display: inline-block;
+    border: none;  
+    cursor: pointer;
+}
+
+
+
+
+
+/* Kullanıcı Bilgileri */
+
+.user-dropdown {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    background-color: #2c2b2b;
+    color: #fff; 
+    padding: 5px 30px; 
+    border-radius: 4px; 
+    width: auto; 
+    box-sizing: border-box; 
+    font-size: 12px;
+}
+
+.user-dropdown .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 15px;
+    left: 0;
+    background-color: #2c2b2b;
+    border-radius: 4px;
+    list-style: none;
+    padding: 15px;
+    box-sizing: border-box; 
+    width: 100%; /* .user-dropdown genişliğini alacak */
+    z-index: 1000;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    opacity: 0;
+    visibility: hidden;
+    font-size: 15px;
+}
+
+
+.user-dropdown .dropdown-menu li a {
+    display: block; 
+    padding: 5px 10px; 
+    color: #fff; 
+    text-decoration: none; 
+    width: fit-content; 
+    margin: 0 auto; 
+    font-size:12px;
+    border-radius: 4px;
+}
+
+
+/* Menü Öğelerinin Hover Efekti */
+.user-dropdown .dropdown-menu li a:hover {
+    background-color: #575757;;
+    
+}
+.user-dropdown .dropdown-menu li a {
+    color: #fff; 
+    text-decoration: none; 
+}
+
+
+
+.user-dropdown .dropdown-menu li {
+    margin-bottom: 14px; 
+    border-bottom: 1px solid #424242; 
+}
+
+
+.user-dropdown  .dropdown-menu li:last-child {
+    margin-bottom: 0;
+}
+
+
+
+
+
+
+
+
+/* Giriş Yap & Kayıt Ol Butonları */
+.auth-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.auth-buttons a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 11px;
+    font-size: 10px;
+    border: 0.1px solid rgb(97, 94, 94); /* Siyah çerçeve */
+}
+
+.login-btn {
+    background-color: rgb(62, 62, 62);
+}
+
+.login-btn:hover {
+    background-color: #444;
+}
+
+
+.register-btn {
+    background-color: #000000; /* Mavi renk */
+}
+
+.register-btn:hover {
+    background-color: #2c2d2d;
+}
+
+
+
+
+/* Ekran 768px'den küçükse */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        display: flex;
+        justify-content: center; /* Ortalamak için center kullanalım */
+        align-items: center;
+        padding: 10px;
+        
+        height: 80px;
+        width: 100%;
+        position: fixed;
+    }
+
+  
+
+    .logo {
+        position: absolute; /* Logo'yu sabitle */
+        left: 50%; /* Sol kenara göre %50 mesafe */
+        transform: translateX(-50%); /* Sol kenardan tam ortalayacak şekilde yerleştir */
+        text-align: center;
+        
+    }
+
+    .hamburger-menu {
+        position: absolute;
+        left: 10px; /* Menü ikonu sol tarafta olacak */
+    }
+    
+    
+    .logo img {
+        margin-bottom: 2px; /* Resim ile yazı arasındaki boşluğu ayarlar */
+        filter: brightness(0) saturate(100%) invert(100%); /* Resmi beyaz yapar (eğer resim renkliyse) */
+    }
+    
+    .logo a {
+        text-decoration: none; /* Linkin altını çizmeyi engeller */
+        color: white; /* Yazı rengi beyaz */
+        font-size: 18px; /* Yazı boyutu */
+        font-weight: bold; /* Yazıyı kalın yapar */
+        margin-top: 5px; /* Resim ile yazı arasına ekstra boşluk ekler */
+    }
+
+    .logo a span {
+        display: none;
+    }
+    .search-bar {
+        display: none; /* Arama çubuğunu gizle */
+    }
+
+    .nav-links, .auth-buttons {
+        display: none; /* Menü öğelerini gizle */
+    }
+
+    .user-info,
+    .user-dropdown,
+    .user-dropdown,
+    .notification-icon {
+        display: none; /* user-info öğesini gizle */
+    }
+
+
+    .account-menu,
+    .hamburger-menu {
+        display: block; /* Hamburger menüsünü göster */
+        cursor: pointer;
+    }
+
+    .account-menu.active, 
+    .account-menu:hover { 
+        filter: brightness(0) saturate(0%) contrast(50%) grayscale(100%);
+    }
+
+    .hamburger-menu.active, 
+    .hamburger-menu:hover { 
+        filter: brightness(0) saturate(0%) contrast(50%) grayscale(100%);
+    }
+
+
+    
+    .account-icon{
+        width: 30px;
+        height: 30px;
+        filter: brightness(0) saturate(100%) invert(100%); /* Resmi beyaz yapar (eğer resim renkliyse) */
+        
+    }
+   
+    .menu-icon {
+        width: 35px;
+        height: 30px;
+        filter: brightness(0) saturate(100%) invert(100%); /* Resmi beyaz yapar (eğer resim renkliyse) */
+        
+        
+        
+    }
+    .account-nav{
+        display: none;
+        background-color: #2c2b2b;
+        position: fixed;
+        top: 90px;
+        left: 200px; /* Sol tarafta 20px boşluk */
+        right: 5px; /* Sağ tarafta 20px boşluk */
+        z-index: 1000;        
+        max-width: 200px;       
+        box-shadow: 0px 8px 48px rgba(0, 0, 0, 0.5); /* Gölge ekleme */
+    }
+
+    .account-menu, .hamburger-menu {
+        margin-left: auto; /* Sağ tarafa kaydır */
+    }
+
+    /* Çıkış Yap butonuna özel stil */
+    .account-nav .logout-link {
+        color: #ffffff;            /* Yazı rengi */
+        background-color: #d35360; /* Arka plan (Kırmızı) */
+        padding: 10px 30px;        /* Üst ve alt padding 10px, sağ ve sol padding 30px */
+        border-radius: 5px;
+        display: inline-block;
+    }
+
+    /* Hover efekti */
+    .account-nav .logout-link:hover {
+        background-color: #c82333; /* Hoverda daha koyu kırmızı */
+    }
+
+
+
+    .mobile-nav {
+        display: none;
+        background-color: #2c2b2b;
+        position: fixed;
+        top: 90px;
+        left: 20px; /* Sol tarafta 20px boşluk */
+        right: 20px; /* Sağ tarafta 20px boşluk */
+        z-index: 1000;
+        padding: 5px;
+        max-height: 50vh; /* Yüksekliği sınırlayıp kaydırma çubuğu eklemek için */
+        overflow-y: auto; /* Yalnızca dikey kaydırma çubuğunu ekler */
+        box-shadow: 0px 8px 48px rgba(0, 0, 0, 0.5); /* Gölge ekleme */
+        
+        
+    }
+
+        /* Giriş Yap butonuna özel stil */
+    .mobile-nav .login-link {
+        color: #ffffff;          /* Yazı rengi */
+        background-color: #484e55; /* Arka plan */
+        padding: 10px 80px;     
+        border-radius: 5px;
+        display: inline-block;
+    }
+
+    /* Kayıt Ol butonuna özel stil */
+    .mobile-nav .register-link {
+        color: #ffffff;
+        background-color: #484e55;
+        padding: 10px 83px;     
+        border-radius: 5px;
+        display: inline-block;
+    }
+    
+    
+    .account-nav ul,
+    .mobile-nav ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+    .account-nav li{
+        text-align: center;
+        padding: 10px;
+        text-align: center;
+        border-bottom: 1px solid #424242; 
+
+    }
+    .mobile-nav li {
+        text-align: center;
+        padding: 10px;
+        border-bottom: 1px solid #424242; 
+    }
+    
+    .account-nav a{
+        color: rgb(255, 255, 255);
+        text-decoration: none;
+        display: block;
+        padding: 10px;
+        font-size: 12px;
+    }
+
+    
+    .mobile-nav a {
+        color: white;
+        text-decoration: none;
+        display: block;
+        padding: 10px;
+        font-size: 12px;
+    }
+    
+    .account-nav a:hover{
+        background-color: #575757;
+
+    }
+    .mobile-nav a:hover {
+        background-color: #575757;
+    }
+    
+    /* Dropdown Menüler */
+    .account-nav .dropdown,
+    .mobile-nav .dropdown {
+        position: relative;
+    }
+
+    /* Menü Alt Menüsü */
+    .account-nav .dropdown-menu,
+    .account-nav .dropdown-submenu,
+    .mobile-nav .dropdown-menu,
+    .mobile-nav .dropdown-submenu,
+    .mobile-nav .dropdown-sub-submenu,
+    .mobile-nav .dropdown-sub-sub-submenu,
+    .mobile-nav .dropdown-sub-sub-sub-submenu {
+        display: none;
+        position: relative; /* Menülerin dikey açılmasını sağlar */
+        top: 0;
+        left: 0;
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        z-index: 1;
+    }
+
+    /* Menü Bağlantıları */
+    .account-nav .dropdown-menu li a,
+    .account-nav .dropdown-submenu li a,
+    .mobile-nav .dropdown-menu li a,
+    .mobile-nav .dropdown-submenu li a,
+    .mobile-nav .dropdown-sub-submenu li a,
+    .mobile-nav .dropdown-sub-sub-submenu li a,
+    .mobile-nav .dropdown-sub-sub-sub-submenu li a {
+        font-size: 12px;
+        padding: 10px;
+        color: white;
+
+    }
+    .account-nav .dropdown-menu li a:hover,
+    .mobile-nav .dropdown-menu li a:hover,
+    .mobile-nav .dropdown-submenu li a:hover,
+    .mobile-nav .dropdown-sub-submenu li a:hover,
+    .mobile-nav .dropdown-sub-sub-submenu li a:hover,
+    .mobile-nav .dropdown-sub-sub-sub-submenu li a:hover {
+        background-color: #575757;;
+    }
+    
+    /* Dropdown Menüsüne Hover Etme */
+    .account-nav .dropdown-menu li a,
+    .mobile-nav .dropdown:hover > .dropdown-menu {
+        display: block;
+    }
+    
+    /* İkinci Seviye Dropdown */
+    .mobile-nav .dropdown-menu .dropdown:hover > .dropdown-submenu {
+        display: block;
+    }
+    
+    /* Üçüncü Seviye Dropdown */
+    .mobile-nav .dropdown-submenu .dropdown:hover > .dropdown-sub-submenu {
+        display: block;
+    }
+    
+    /* Dördüncü Seviye Dropdown */
+    .mobile-nav .dropdown-sub-submenu .dropdown:hover > .dropdown-sub-sub-submenu {
+        display: block;
+    }
+    
+    /* Beşinci Seviye Dropdown */
+    .mobile-nav .dropdown-sub-sub-submenu .dropdown:hover > .dropdown-sub-sub-sub-submenu {
+        display: block;
+    }
+    
+    /* Menü Renk Değişiklikleri */
+    .mobile-nav .dropdown-menu {
+        background-color: #1a1a1a; /* Birinci Seviye */
+    }
+    
+    .mobile-nav .dropdown-submenu {
+        background-color: #000000; /* İkinci Seviye */
+        border-radius: 0px;
+    }
+
+    
+
+    /* Alt Menü ve Üçüncü Seviye Menü Konumlandırma */
+    .mobile-nav .dropdown-submenu,
+    .mobile-nav .dropdown-sub-submenu,
+    .mobile-nav .dropdown-sub-sub-submenu,
+    .mobile-nav .dropdown-sub-sub-sub-submenu {
+        left: 0; /* Yatay kayma kaldırıldı, dikey açılacak */
+        top: 100%;
+    }
+
+
+   
+
+
+}
+
+
+/* Ekran 769px ve daha büyükse */
+@media (min-width: 769px) {
+    .hamburger-menu {
+        display: none; /* Hamburger menüyü gizle */
+    }
+    
+    .mobile-nav {
+        display: none; /* Mobil menüyü gizle */
+    }
+
+    .account-icon,.account-menu.account-menu {
+        display: none; /* Hamburger menüyü gizle */
+    }
+    
+    .account-nav {
+        display: none; /* Mobil menüyü gizle */
+    }
+}
+
+
+
+
+
+

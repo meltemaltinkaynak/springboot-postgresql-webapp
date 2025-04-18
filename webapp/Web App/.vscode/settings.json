@@ -1,0 +1,8 @@
+{
+  "liveServer.settings.https": {
+    "enable": true,
+    "cert": "C:/Users/Admin/selfsigned.crt",
+    "key": "C:/Users/Admin/private.key",
+    "passphrase": "mykeystorepassword"
+  }
+}

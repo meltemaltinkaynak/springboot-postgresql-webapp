@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="images/logo2.png" type="image/png">
+    <title>Profilim</title>
+    <link rel="stylesheet" href="styles/navbar.css">
+    <link rel="stylesheet" href="styles/content.css">
+    <link rel="stylesheet" href="styles/profile.css">
+    <link rel="stylesheet" href="styles/toast.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+  </head>
+  <body>
+      <!-- Navbar  -->
+     <div id="navbar-container"></div>
+
+    <div class="main-account">
+      <div class="account-container">
+        <div class="account-header">Profil</div>
+        <div class="account-photo">
+          <img
+            id="profile-photo"
+            src=""
+           
+          />
+        </div>
+
+        
+
+        <!-- Profil Bilgileri -->
+      <div class="account-info" id="name-container">
+        <span>Ad:</span> <span id="name"></span>
+      </div>
+      <div class="account-info" id="surname-container">
+        <span>Soyad:</span> <span id="surname"></span>
+      </div>
+      <div class="account-info" id="email-container">
+        <span>E-mail:</span> <span id="email"></span>
+      </div>
+      <div class="account-info" id="created-at-container">
+        <span>Hesap Oluşturulma Zamanı:</span> <span id="created-at"></span>
+      </div>
+      <div class="account-info" id="user-role-container">
+        <span>Role:</span> <span id="user-role"></span>
+      </div>
+
+        <!-- Düzenleme Alanı (Başlangıçta gizli) -->
+        <div class="account-info" id="edit-profile-photo-container" style="display: none;">
+          <span>Profil Fotoğrafı:</span>
+          <input type="file" id="edit-profile-photo" />
+        </div>
+        <div class="account-info" id="edit-first-name-container" style="display: none;">
+          <span>Ad:</span>
+          <input type="text" id="edit-first-name" value="" />
+        </div>
+        <div class="account-info" id="edit-last-name-container" style="display: none;">
+          <span>Soyad:</span>
+          <input type="text" id="edit-last-name" value="" />
+        </div>
+       
+
+        <!-- Butonlar -->
+        <div class="account-buttons">
+          <button id="edit-btn" class="action-btn">Düzenle</button>
+          <button id="save-btn" class="action-btn" style="display: none;">Kaydet</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- JavaScript Dosyası -->
+    <script src="js/navbar.js" defer></script>
+    <script src="js/profile.js" defer></script>
+    <script src="js/toast.js" defer></script>
+
+    <!-- Toast Bildirimi -->
+    <div id="toast" class="toast"></div>
+    
+  </body>
+</html>

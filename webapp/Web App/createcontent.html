@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="images/logo2.png" type="image/png">
+
+    <title>İçerik Yükleme</title>
+
+    <link rel="stylesheet" href="styles/createcontent.css" />
+    <link rel="stylesheet" href="styles/navbar.css" />
+    <link rel="stylesheet" href="styles/toast.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Navbar  -->
+    <div id="navbar-container"></div>
+
+    <main class="content">
+      <h1>İçerik Ekle</h1>
+      <div class="content-form">
+        <label for="title">Başlık</label>
+        <input type="text" id="title" placeholder="İçerik başlığını girin" />
+
+        <label for="image">Görsel Yükle</label>
+        <input type="file" id="image" name="image" />
+
+        <label for="content">İçerik</label>
+        <textarea id="content" placeholder="İçerik metnini girin"></textarea>
+
+        <label for="category">Kategori Seç</label>
+        <select id="category">
+          <option disabled selected>Bir kategori seçin</option>
+          <option>WEBTASARIMI</option>
+          <option>HTML</option>
+          <option>CSS</option>
+          <option>JJAVASCRIPT</option>
+          <option>VERITABANI</option>
+          <option>BACKENDTEKNOLOJILERI</option>
+          <option>API</option>
+          <option>SUNUCUHOSTING</option>
+          <option>UIUX</option>
+          <option>TASARIMARACLARI</option>
+          <option>WEBPERFORMANSISEO</option>
+          <option>WEBGUVENLIGI</option>
+        </select>
+
+        <label for="restriction">Kısıt Durumu</label>
+        <select id="restriction">
+          <option disabled selected>Bir kısıt durumu seçin</option>
+          <option value="restricted">Kısıtlı</option>
+          <option value="unrestricted">Kısıtlı Değil</option>
+        </select>
+
+
+        <button id="uploadButton">İçeriği Yükle</button>
+      </div>
+    </main>
+
+    <!-- JavaScript Dosyası -->
+    <script src="js/navbar.js" defer></script>
+    <script src="js/createcontent.js"></script>
+    <script src="js/toast.js" defer></script>
+
+    <!-- Toast Bildirimi -->
+    <div id="toast" class="toast"></div>
+    
+  </body>
+</html>

@@ -1,0 +1,267 @@
+/* Account */
+.main-account {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-image: url("images/login-2.jpg"); /* Arka plan resmi */
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: 1;
+  width: 100%;  /* Tam genişlik */
+}
+
+/* Account container */
+.account-container {
+  width: 400px;
+  padding: 50px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  border: 1px solid #fff;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative; /* Bu özellik navbar ile çakışmamalı */
+  margin-top: 0; /* Navbar ile çakışmasını engellemek için margin-top kaldırıldı */
+  z-index: 1;
+}
+
+.account-container::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+}
+
+/* Account header */
+.account-header {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Profil fotoğrafı */
+.account-photo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+#profile-photo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #fff;
+}
+
+
+
+/* Profil bilgileri */
+.account-info {
+  display: flex;
+  justify-content: space-between;  /* Sol ve sağ tarafları ayırmak */
+  align-items: center;  /* Dikeyde ortalamak */
+  margin-bottom: 15px;
+  padding: 5px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+.account-info span {
+  display: inline-block;
+  font-weight: bold;
+  width: 45%;  /* Her iki kısmı %45'lik alanda hizalar */
+  text-align: left;  /* Başlık kısmı sola hizalanacak */
+}
+
+.account-info span:last-child {
+  width: 45%;  /* İçerik kısmına da %45'lik alan verildi */
+  text-align: left;  /* İçeriği sola hizala */
+}
+
+
+
+/* Genel buton stili */
+.action-btn {
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  background-color: #d43636;
+  color: white;
+  font-weight: bold;
+  margin: 10px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.action-btn:hover {
+  background-color: #8a91cf;
+  transform: scale(1.05);
+}
+
+/* Account buttons */
+.account-buttons {
+  display: flex;
+  justify-content: center; /* Butonu ortalar */
+  gap: 20px;
+  margin-top: 20px;
+}
+
+
+/* Responsive Tasarım */
+
+/* Mobil Cihazlar (375px ve altı) */
+@media (max-width: 375px) {
+  .account-container {
+    width: 90%;
+    padding: 30px;
+  }
+
+  .account-header {
+    font-size: 18px;
+  }
+
+  .account-role {
+    font-size: 14px;
+  }
+
+  .account-info {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .action-btn {
+    font-size: 0.9rem;
+  }
+
+  .account-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+/* Tablet Cihazlar (768px ve altı) */
+@media (max-width: 768px) {
+  .account-container {
+    width: 80%;
+    padding: 40px;
+  }
+
+  .account-header {
+    font-size: 20px;
+  }
+
+  .account-role {
+    font-size: 15px;
+  }
+
+  .account-buttons {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .action-btn {
+    font-size: 1rem;
+  }
+}
+
+/* Küçük Ekranlı Masaüstü (1024px ve altı) */
+@media (max-width: 1024px) {
+  .account-container {
+    width: 60%;
+    padding: 40px;
+  }
+
+  .account-header {
+    font-size: 20px;
+  }
+
+  .account-role {
+    font-size: 16px;
+  }
+
+  .account-buttons {
+    gap: 20px;
+  }
+
+  .action-btn {
+    font-size: 1.1rem;
+  }
+}
+
+/* Büyük Ekranlar (1280px ve üzeri) */
+@media (min-width: 1280px) {
+  .account-container {
+    width: 400px;
+    padding: 50px;
+  }
+
+  .account-header {
+    font-size: 22px;
+  }
+
+  .account-role {
+    font-size: 16px;
+  }
+
+  .account-buttons {
+    gap: 20px;
+  }
+
+  .action-btn {
+    font-size: 1.2rem;
+  }
+}
+
+ /* Toast Bildirimi Stili */
+ .toast {
+  visibility: hidden;
+  min-width: 220px;
+  background-color: #28a745;
+  color: white;
+  text-align: center;
+  border-radius: 8px;
+  padding: 10px 20px;
+  position: fixed;
+  z-index: 1000;
+  left: 50%;
+  bottom: 30px;
+  transform: translateX(-50%);
+  font-size: 14px;
+  font-weight: bold;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.toast.show {
+  visibility: visible;
+  opacity: 1;
+  animation: fadeout 4s ease-in-out 1s forwards;
+}
+
+@keyframes fadeout {
+  0% { opacity: 1; }
+  90% { opacity: 0; }
+  100% { opacity: 0; visibility: hidden; }
+}
+
+.error-message {
+  color: red;
+  font-size: 12px;
+
+  margin-top: 5px;
+}
+
+

@@ -1,0 +1,397 @@
+/* ContentPanel.css */
+body {
+  display: flex;
+  justify-content: center; /* Yatayda ortalar */
+  align-items: flex-start; /* Başlangıçta (üstte) hizalar */
+  margin: 0;
+  
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: #ffffff;
+  height: 100vh; /* Sayfa yüksekliğini tamamen kapsayacak şekilde ayarla */
+}
+
+
+.content-container {
+  width: 100%;
+  max-width: 1000px; /* Maksimum genişlik */
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  background: rgba(255, 255, 255, 0.3); /* Şeffaf arka plan */
+  
+  min-height: 100vh;
+  box-sizing: border-box;
+  margin-top: 60px; /* Navbar yüksekliği kadar boşluk bırak */
+  box-shadow: 0px 8px 48px rgba(0, 0, 0, 0.5); /* Gölge ekleme */
+}
+
+
+.content-date {
+  font-size: 12px;
+  color: #666;
+  margin-top: 10px;
+}
+.content-card {
+  background: white;
+  padding: 20px;
+  margin-bottom: 20px;
+  
+  box-shadow: 0px 8px 48px rgba(0, 0, 0, 0.5); /* Gölge ekleme */
+  transition: transform 0.3s ease-in-out;
+}
+
+.content-container h1 {
+  font-size: 1rem; /* Başlık boyutu */
+  color: #333; /* Yazı rengi */
+  margin-bottom: 20px; /* Başlık ile içerik arasındaki mesafe */
+  font-weight: bold; /* Kalın yazı */
+
+  letter-spacing: 1px; /* Harf aralığını açmak için */
+  padding: 2px 0; /* Üst ve alt boşluk */
+}
+
+.content-container h3 {
+  font-size: 12px; /* Başlık boyutu */
+  color: #393939; /* Yazı rengi */
+}
+
+
+
+.content-title {
+  color: #333;
+  font-size: 18px;
+  margin-bottom: 40px;
+  text-align: center; /* Metni yatayda ortalar */
+ 
+   
+}
+.content-title a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s;
+}
+
+
+.content-title a:hover {
+  color: #000000;
+}
+
+
+.content-image {
+  width: 80%; /* Görselin genişliğini yarıya indir */
+  height: 80%; /* Görselin yüksekliğini yarıya indir */
+  object-fit: contain; /* Görselin içeriğini tamamen gösterir ve oranlarını korur */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Hafif gölge efekti */
+  margin-bottom: 40px;
+
+  /* Ortalamak için */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.content-text {
+  margin: 15px 0;
+  line-height: 1.8;
+  font-size: 12px;
+  color: #333333;
+  display: inline-block;
+  max-width: 100%;
+  word-wrap: break-word;
+  font-family: 'Arial', sans-serif;
+  font-weight: normal;
+  background-color: #f9f9f9;
+  padding: 10px;
+  
+  border-radius: 5px;
+  text-align: justify;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+  letter-spacing: 0.5px;
+}
+
+
+.content-category,
+.content-author {
+  font-size: 10px;
+  color: #666;
+}
+
+
+/* like yorum */
+
+.content-actions {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+  
+}
+
+
+.comment-btn{
+  background: linear-gradient(45deg, #545579, #4e5f71);
+  padding: 10px 25px; /* Butonun içindeki boşluğu küçültüyoruz */
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 0.75rem; /* Daha küçük yazı boyutu */
+  cursor: pointer;
+  transition: background 0.3s ease-in-out, transform 0.3s ease-in-out;
+  display: inline-flex; /* Flex yerine inline-flex kullanarak daha küçük boyut */
+  align-items: center;
+  gap: 3px; /* İçerik arası mesafe */
+  height: auto; /* Buton yüksekliğini otomatik ayarla */
+}
+
+/* Normal durumda buton */
+.like-btn {
+  background: linear-gradient(45deg, #37374f, #4e5f71); /* Normal arka plan rengi */
+  color: #fff;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 5px;
+  font-size: 0.75rem;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out, transform 0.3s ease-in-out;
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  height: auto;
+}
+
+/* Beğeni yapılmış durumda buton */
+.like-btn.liked {
+  background: linear-gradient(45deg, #c08c8c, #e56060); /* Arka plan rengini değiştir */
+  color: #fff;
+}
+.like-btn i,
+.comment-btn i {
+  font-size: 1rem; /* İkon boyutunu küçültüyoruz */
+}
+
+.like-btn span,
+.comment-btn span {
+  font-size: 0.75rem; /* Sayacın yazı boyutunu küçültüyoruz */
+}
+
+.like-btn:hover,
+.comment-btn:hover {
+  background: linear-gradient(45deg, #4e5f71, #575875);
+  
+}
+
+
+/* Yorumları göstermek için sekme animasyonu */
+.comment-section {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.comment-section.show {
+  display: block;
+  opacity: 1;
+}
+
+/* Yorumları liste yerine kart şeklinde göster */
+.comment-card {
+  background: #e1dfdf;
+  padding: 8px;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  font-size: 1rem;
+  color: #333;
+  border: 1px solid #ccc; /* Gri çerçeve */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Gölgeleme */
+}
+
+.comment-author {
+  font-weight: bold;
+  color: #333333;
+  font-size: 12px;
+}
+
+.comment-text {
+  margin-top: 5px;
+  color: #333333;
+  font-size: 12px;
+}
+
+.comment-date {
+  font-size: 10px;
+  color: #3e3d3d;
+  margin-top: 10px;
+}
+
+
+
+/* Yorumlar metni */
+textarea {
+  width: 98%;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 12px;
+  color: #333;
+}
+
+/* Placeholder için stil */
+textarea::placeholder {
+  color: #aaa; /* Placeholder metni için gri renk */
+  font-style: italic; /* Placeholder metnini italik yapar */
+  font-size: 12px; /* Placeholder metni font boyutunu ayarlar */
+}
+
+.submit-comment {
+  background: rgb(62, 62, 62);
+  color: rgb(255, 255, 255);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  
+}
+
+.submit-comment:hover {
+  background:  #444;
+}
+
+
+
+/* Beğeni Kartı */
+.like-card {
+  background: #e1dfdf;
+  padding: 8px;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  font-size: 1rem;
+  color: #333;
+  border: 1px solid #ccc; /* Gri çerçeve */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Gölgeleme */
+}
+
+.like-author {
+  font-weight: bold;
+  color: #333333;
+  font-size: 12px;
+}
+.like-time {
+  font-size: 10px;
+  color: #3e3d3d;
+  margin-top: 10px;
+}
+
+.like-card p {
+  margin: 5px 0;
+  font-size: 10px;
+}
+
+.likes-section {
+  margin-top: 20px;
+  display: none;
+}
+
+
+
+/* beğeni gör -yorum gör */
+/* Beğenileri gör linki stil */
+/* Beğenileri gör ve Yorumları gör linkleri yan yana */
+.content-likes,
+.view-comments-section {
+  display: inline-block; /* Yan yana yerleştirir */
+  margin-right: 25px; /* Aralarına boşluk ekler */
+  margin-left: 18px;
+  gap: 30px;
+  margin-top: 7px;
+}
+
+.content-likes .view-likes,
+.view-comments-section .view-comments-link {
+  font-size: 10px; /* Yazı boyutunu küçültür */
+  color: #4e5f71; /* Renk */
+  text-decoration: none; /* Alt çizgiyi kaldırır */
+  
+  padding-bottom: 2px; /* Alt çizgi ile metin arasına boşluk ekler */
+}
+
+/* Linklerin sağ tarafa yaslanması için */
+.view-comments-section {
+  text-align: left; /* Linkin sağa yaslanmasını sağlar */
+}
+
+
+/* Responsive Tasarım */
+
+
+
+/* Tablet Cihazlar (768px ve altı) */
+@media (max-width: 768px) {
+  .content-container {
+    width: calc(100% - 50px); /* Tabletlerde biraz daha fazla alan */
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 15px;
+    margin-top: 80px;
+  }
+
+  .content-title {
+    font-size: 8pxrem;
+  }
+
+  .content-card {
+    padding: 18px;
+  }
+
+  .content-actions {
+    gap: 12px;
+  }
+
+  .like-btn,
+  .comment-btn,
+  .submit-comment {
+    font-size: 1rem;
+    padding: 9px 18px;
+  }
+
+  .content-likes,
+  .view-comments-section {
+    
+    display: inline-block; /* Yan yana yerleştirir */
+    margin-right: 8px; /* Aralarına boşluk ekler */
+    margin-left: 8px;
+    gap: 30px;
+  }
+
+  /* Linklerin yazı boyutunu biraz küçültme */
+  .content-likes .view-likes,
+  .view-comments-section .view-comments-link {
+    font-size: 12px;
+  }
+
+  textarea {
+    width: 90%; /* Ekranın %90'ı kadar genişlik */
+    font-size: 14px; /* Font boyutunu biraz büyütüyoruz */
+    padding: 12px; /* Daha fazla iç boşluk */
+    margin-top: 8px; /* Üst boşluğu azaltıyoruz */
+  }
+
+  .content-image {
+    width: 80%; /* Görselin genişliğini yarıya indir */
+    height: 80%; /* Görselin yüksekliğini yarıya indir */
+    object-fit: contain; /* Görselin içeriğini tamamen gösterir ve oranlarını korur */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Hafif gölge efekti */
+    margin-bottom: 40px;
+  
+    /* Ortalamak için */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+
+}

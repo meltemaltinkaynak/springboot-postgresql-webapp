@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="images/logo2.png" type="image/png">
+
+    <title>Admin Panel</title>    
+
+    <link rel="stylesheet" href="styles/navbar.css">    
+    <link rel="stylesheet" href="styles/contentadmin.css" />
+    <link rel="stylesheet" href="styles/toast.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Navbar  -->
+    <div id="navbar-container"></div>
+
+    <!-- Admin Panel -->
+    <div class="panel-container">
+        <div class="panel">
+            <div class="panel-header">
+                Admin Panel
+            </div>
+
+            <div class="content">
+                <div id="kullaniciYonetimi" class="hidden">
+                    <h2>Kullanıcı Yönetimi</h2>
+                    <ul>
+                        <li><a href="kullaniciEkle.html" class="link">Kullanıcı Ekle</a></li>
+                        <li><a href="kullaniciListele.html" class="link">Kullanıcı Listesi</a></li>
+                    </ul>
+                </div>
+
+                <div id="icerikYonetimi" class="hidden">
+                    <h2>İçerik Yönetimi</h2>
+                    <ul>
+                        <li><a href="createcontent.html" class="link">İçerik Ekle</a></li>
+                        <li><a href="iceriklerim.html" class="link">İçeriklerim</a></li>
+                    </ul>
+                </div>
+            </div>
+
+    
+
+
+    <script src="js/navbar.js"></script>
+    <script src="js/contentadmin.js"></script>
+    <script src="js/toast.js" defer></script>
+
+    <!-- Toast Bildirimi -->
+    <div id="toast" class="toast"></div>
+    
+  </body>
+</html>
