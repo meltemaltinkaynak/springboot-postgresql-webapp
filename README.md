@@ -2,7 +2,7 @@
 
 Bu web uygulaması, **Spring Boot** ve **PostgreSQL** kullanılarak geliştirilmiştir. Kullanıcıların kayıt olabileceği, giriş yapabileceği ve içeriklerle etkileşime geçebileceği bir platform sunar. Proje, farklı kullanıcı rollerine sahip olup her bir rol için farklı erişim ve yetkilendirme seviyeleri sağlar.
 
-## Kullanıcı Roller
+## Kullanıcı Rolleri
 - **User (Kullanıcı)**: Kayıt olma, giriş yapma, içeriklerle etkileşime geçme (beğenme, yorum yapma) ve kendi profilini ve aktivitelerini görüntüleme yetkisine sahiptir.
 - **Content Admin (İçerik Yöneticisi)**: İçerik oluşturma, düzenleme ve silme işlemleri yapabilir.
 - **Super Admin (Süper Admin)**: Kullanıcı yönetimi ve içerik görünürlüğü gibi ekstra yetkilere sahiptir.
@@ -19,14 +19,16 @@ Bu web uygulaması, **Spring Boot** ve **PostgreSQL** kullanılarak geliştirilm
 
 ## Kullanılan Teknolojiler
 ### Backend
-- **Spring Boot**: Backend kısmı için RESTful API geliştirilmiştir.
-- **Spring Data JPA**: Veritabanı ile etkileşim ve ORM için kullanılır.
-- **Spring Security**: Kullanıcı doğrulama ve yetkilendirme işlemleri için kullanılır.
-- **JWT (JSON Web Token)**: Güvenli kimlik doğrulama için token ve çerezler kullanılır.
-- **PostgreSQL**: Kullanıcı ve içerik verilerinin saklandığı ilişkisel veritabanıdır.
+- **Java  22.0.2**
+- **Spring Boot  3.3.7**
+- **Maven 3.9.9**
+- **Spring Data JPA** 
+- **Spring Security 3.4.2**
+- **JWT (JSON Web Token) 0.11.5**
+- **PostgreSQL**
 
 ### Frontend
-- **HTML, CSS, JavaScript**: Temel web arayüzü ve etkileşimler için kullanılır.
+- **HTML5, CSS3, JavaScript**: Temel web arayüzü ve etkileşimler için kullanılır.
   
 ## Bağımlılıklar
 
@@ -59,15 +61,77 @@ Bu proje **Spring Boot** tabanlı bir web uygulamasıdır ve yapılandırma yön
 - **Spring Boot Starter Test**  
   Birim ve entegrasyon testleri için gerekli bağımlılıkları içerir.
 
-  ##  Veritabanı -**PostgreSQL**
+##  Veritabanı - **PostgreSQL**
 
-###  Veritabanı Yapılandırması
+### Veritabanı Yapılandırması
 
 Aşağıda `application.properties` dosyasında kullanılan temel yapılandırmalar yer almaktadır:
  - spring.datasource.url=jdbc:postgresql://localhost:5432/postgres
  - spring.jpa.properties.hibernate.default_schema=web
  - spring.datasource.username=postgres
  - spring.datasource.password= password
+
+### ER Diyagramı 
+![ER Diyagramı](webapp/images/erdiagram.png)
+
+### Tablo Yapısı
+#### user:
+![](webapp/images/user.png)
+#### content:
+!](webapp/images/content.png)
+#### comment:
+![](webapp/images/comment.png)
+#### like:
+![](webapp/images/like.png)
+
+
+##  Arayüz
+#### navbar:
+![](webapp/images/navbar.png)
+
+![](webapp/images/menu.png)
+
+![](webapp/images/menu2.png)
+
+![](webapp/images/login-navbar.png)
+
+![](webapp/images/navbar2.png)
+
+
+#### login:
+![](webapp/images/login.png)
+
+![](webapp/images/login2.png)
+
+#### register:
+![](webapp/images/register.png)
+
+#### toast-message:
+![](webapp/images/toast.png)
+
+![](webapp/images/toast2.png)
+
+
+#### içerik:
+![](webapp/images/kategori-content.png)
+
+![](webapp/images/content2.png)
+
+![](webapp/images/content-like.png)
+
+![](webapp/images/content-comment.png)
+
+
+
+#### profile:
+![](webapp/images/profile.png)
+
+![](webapp/images/user-comment.png)
+
+![](webapp/images/user-like.png)
+
+
+
 
 
 
