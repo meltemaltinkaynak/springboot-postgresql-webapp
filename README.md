@@ -28,9 +28,52 @@ Bu web uygulaması, **Spring Boot** ve **PostgreSQL** kullanılarak geliştirilm
 ### Frontend
 - **HTML, CSS, JavaScript**: Temel web arayüzü ve etkileşimler için kullanılır.
   
-## Veritabanı
-- **PostgreSQL**
-## Kullanıcı Arayüzü
+## Bağımlılıklar
+
+Bu proje **Spring Boot** tabanlı bir web uygulamasıdır ve yapılandırma yönetimi için **Maven** kullanılmıştır. 
+
+- **Spring Boot Starter Web**  
+  Web uygulamaları geliştirmek için gerekli tüm bileşenleri içerir (Tomcat, Jackson, vb.).
+
+- **Spring Boot Starter Data JPA**  
+  Veritabanı işlemleri için JPA desteği sağlar.
+
+- **Spring Boot Starter Validation**  
+  Veri doğrulama işlemleri için kullanılır (`@Valid`, `@NotNull`, vb.).
+
+- **Spring Boot Starter Security** (`v3.4.2`)  
+  Uygulama güvenliğini sağlamak için Spring Security bileşenlerini içerir.
+
+- **PostgreSQL JDBC Driver**  
+  PostgreSQL veritabanı ile bağlantı kurmak için kullanılır.
+
+- **Lombok**  
+  Boilerplate kodları azaltmak için (getter, setter, constructor, vb.) kullanılır.
+
+- **JSON Web Token (JWT)**  
+  Kullanıcı kimlik doğrulaması için aşağıdaki bağımlılıklar kullanılmıştır:
+  - `jjwt-api`
+  - `jjwt-impl`
+  - `jjwt-jackson`
+
+- **Spring Boot Starter Test**  
+  Birim ve entegrasyon testleri için gerekli bağımlılıkları içerir.
+
+  ##  Veritabanı -**PostgreSQL**
+
+###  Veritabanı Yapılandırması
+
+Aşağıda `application.properties` dosyasında kullanılan temel yapılandırmalar yer almaktadır:
+ - spring.datasource.url=jdbc:postgresql://localhost:5432/postgres
+ - spring.jpa.properties.hibernate.default_schema=web
+ - spring.datasource.username=postgres
+ - spring.datasource.password= password
+
+
+
+
+
+
 
 
 
