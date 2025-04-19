@@ -112,6 +112,8 @@ Aşağıda `application.properties` dosyasında kullanılan temel yapılandırma
 ![](webapp/images/toast2.png)
 
 
+
+
 #### içerik:
 ![](webapp/images/kategori-content.png)
 
@@ -129,6 +131,8 @@ Aşağıda `application.properties` dosyasında kullanılan temel yapılandırma
 ![](webapp/images/user-comment.png)
 
 ![](webapp/images/user-like.png)
+
+![](webapp/images/user-statistic.png)
 
 
 
