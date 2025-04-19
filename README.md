@@ -109,6 +109,8 @@ Aşağıda `application.properties` dosyasında kullanılan temel yapılandırma
 #### toast-message:
 ![](webapp/images/toast.png)
 
+![](webapp/images/toast2.png)
+
 
 
 
