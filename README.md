@@ -130,6 +130,8 @@ Aşağıda `application.properties` dosyasında kullanılan temel yapılandırma
 
 ![](webapp/images/user-like.png)
 
+![](webapp/images/user-statistic.png)
+
 
 
 
