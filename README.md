@@ -78,7 +78,7 @@ Aşağıda `application.properties` dosyasında kullanılan temel yapılandırma
 #### user:
 ![](webapp/images/user.png)
 #### content:
-!](webapp/images/content.png)
+![](webapp/images/content.png)
 #### comment:
 ![](webapp/images/comment.png)
 #### like:
