@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/logo2.png" type="image/png">
+    <title>Web Craft</title>
+    <link rel="stylesheet" href="styles/navbar.css">
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/toast.css">
+    <link rel="stylesheet" href="styles/footer.css">
+</head>
+<body>
+
+     <!-- Navbar  -->
+     <div id="navbar-container"></div>
+
+    <header class="hero">
+        <div class="overlay"></div>
+        <div class="hero-content">
+          <h1>Web’e Dair Her Şey: Senin İçeriğin, Senin Topluluğun</h1>
+          <div class="hero-buttons">
+            <a href="recent-contents.html" class="hero-btn">En Son Eklenenler</a>
+            <a href="popular.html" class="hero-btn">Popüler İçerikler</a>            
+          </div>
+          <div class="scroll-down">
+            <img src="images/arrow-icon.png" alt="Aşağı kaydır" id="scrollArrow">
+          </div>
+        </div>
+    </header>
+
+
+    
+    <!-- Arama Bölümü -->
+    <div id="latest" class="searchbg">
+      <section class="search-section">
+        <input type="text" id="search" class="search-bar" placeholder="Ara...">
+      </section>
+    </div>
+
+    
+   
+    <div id ="latest1" class="content-sections">
+        <!-- Son Blog Yazıları -->
+        <section id="latest" class="recentfour">
+            <h1 class="content-heading">En Son Eklenenler</h1>       
+            <div class="content-container"></div>     
+        </section>
+
+        <div class="right-bar">
+            <!-- Popüler Yazılar -->
+            <section id="popular" class="popular-section">
+                <h1 class="popular-heading">En Çok Okunanlar</h1>
+                <div class="popular-content">
+                    <!-- JavaScript ile dinamik olarak doldurulacak -->
+                </div>
+            </section>
+
+            <!-- Kategoriler -->
+            <section class="categories-section">
+                <h2>Kategoriler</h2>
+                <div class="categories">
+                    <a href="category.html?category=webdesign" class="category-card">
+                        <img src="/images/design-icon.png" alt="Web Tasarım">
+                        <span>Web Tasarım</span>
+                    </a>
+                    <a href="category.html?category=hosting" class="category-card">
+                        <img src="/images/web-hosting-icon.png" alt="Sunucu ve Hosting">
+                        <span>Sunucu ve Hosting</span>
+                    </a>
+                    <a href="category.html?category=webperformans" class="category-card">
+                        <img src="/images/web-performance-icon.png" alt="Web Performansı ve SEO">
+                        <span>Web Performansı ve SEO</span>
+                    </a>
+                    <a href="category.html?category=webguvenlik" class="category-card">
+                        <img src="/images/web-security-icon.png" alt="Web Güvenliği">
+                        <span>Web Güvenliği</span>
+                    </a>
+                    <a href="category.html?category=veritabani" class="category-card">
+                        <img src="/images/database-icon.png" alt="Database">
+                        <span>Veritabanı</span>
+                    </a>
+                    <a href="category.html?category=uiux" class="category-card">
+                        <img src="/images/uiux-icon.png" alt="uıux">
+                        <span>UI/UX</span>
+                    </a>
+                </div>
+            </section>
+        </div>
+    </div>
+
+
+
+   <!-- İstatistikler -->
+    <section id="latest2" class="stats-section">
+        <div class="stats">
+            <div class="stat-card">
+                <span id="contentCount"></span> <!-- BURAYA id EKLEDİK -->
+                <p>İçerik</p>
+            </div>
+            <div class="stat-card">
+                <span id="authorCount"></span> <!-- BURAYA id EKLEDİK -->
+                <p>Yazar</p>
+            </div>
+            <div class="stat-card">
+                <span id="viewCount"></span> <!-- BURAYA id EKLEDİK -->
+                <p>Okuma</p>
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>© 2025 Web Craft. Tüm hakları saklıdır.</p>
+            <div class="footer-links">
+                <a href="index.html">Ana Sayfa</a>
+                <a href="recent-contents.html">En Son İçerikler</a>
+                <a href="popular.html">Popüler İçerikler</a>
+                <a href="privacy-policy.html">Gizlilik Politikası</a>
+                <a href="terms-of-use.html">Kullanım Şartları</a>
+            </div>
+        </div>
+    </footer>
+    
+   
+
+
+    <!-- JavaScript Dosyası -->
+    <script src="js/navbar.js" defer></script>
+    <script src="js/toast.js" defer></script>
+    <script src="js/logout.js" defer></script>
+    <script src="js/recent-contents-4.js" defer></script>
+    <script src="js/most-viewed-contents-3.js" defer></script>
+    <script src="js/web-statistics.js" defer></script>
+    <script src="js/scroll.js" defer></script>
+
+    <!-- Toast Bildirimi -->
+    <div id="toast" class="toast"></div>
+</body>
+</html>

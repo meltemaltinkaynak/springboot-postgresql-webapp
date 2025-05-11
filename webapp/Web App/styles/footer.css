@@ -1,0 +1,56 @@
+
+.footer {
+    background-color: #f5f5f5;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    padding: 15px 0;
+    text-align: center;
+    font-size: 12px;
+    color: #666363;
+    width: 100%;    
+    margin-top: auto; 
+}
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Tüm ekran yüksekliği */
+  }
+
+/* Footer içeriği*/
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Footer linkleri */
+.footer-links {
+    margin-top: 10px;
+}
+
+.footer-links a {
+    margin: 0 10px;
+    color: #666363;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #3f3e3e;
+}
+
+@media (max-width: 768px) {
+    .footer-links {
+        display: none;
+    }
+
+    .footer {
+        background-color: #8b8a8a;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        text-align: center;
+        font-size: 12px;
+        color: #ffffff;
+        width: 100%;
+        margin-top: auto;
+        padding: 5px 0;
+    }
+}
+

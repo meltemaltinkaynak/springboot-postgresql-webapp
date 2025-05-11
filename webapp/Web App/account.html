@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="images/logo2.png" type="image/png">
+    <title>Profilim</title>
+    <link rel="stylesheet" href="styles/navbar.css">
+    <link rel="stylesheet" href="styles/account.css">
+    <link rel="stylesheet" href="styles/toast.css" />
+    <link rel="stylesheet" href="styles/footer.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <div id="navbar-container"></div>
+
+    <div class="wrapper">
+
+          <!-- Profile Container -->
+          <div class="profile-page">
+            <!-- Left Sidebar -->
+            <div class="profile-sidebar">
+              <img id="profile-photo" src="images/defaultpp.jpg" alt="Profil Fotoğrafı" class="pp">
+              
+              <div class="profile-info">
+                <h2><span id="name"></span> <span id="surname"></span></h2>
+                <p id="email"></p>
+                <p id="created-at"></p>
+              </div>
+            
+              <img id="edit-icon" src="images/editprofileicon.png" alt="Düzenle" class="edit-icon">
+              <span id="tooltip" class="tooltip"></span>
+            </div>
+
+            <!-- Right Content Tabs -->
+           
+            <div class="profile-content">
+              <div class="tab-buttons">
+                <button class="tab-button active" data-tab="posts">İçerikler</button>
+                <button class="tab-button" data-tab="likes-comments">Hareketler</button>
+                <button class="tab-button" data-tab="statistics">İstatistikler</button>
+              </div>
+            
+            
+              <div id="posts" class="tab-content active">
+                <h1 class="heading"></h1>
+                <div class="content-container"></div>
+              </div>
+            
+              <div id="likes-comments" class="tab-content">
+                <h1 class="heading"></h1>
+                <div class="sub-tab-buttons">
+                    <button class="sub-tab-button active" data-subtab="likes">Beğeniler</button>
+                    
+                    <button class="sub-tab-button" data-subtab="comments">Yorumlar</button>
+                </div>
+                <div id="likes" class="sub-tab-content active">
+                  
+                  <!-- Beğeniler burada -->
+                </div>
+                <div id="comments" class="sub-tab-content">
+                  
+                  <!-- Yorumlar burada -->
+                </div>
+              </div>
+            
+              <div id="statistics" class="tab-content">
+                <h1 class="heading"></h1>
+                <!-- İstatistikler burada -->
+
+              </div>
+            </div>
+                  
+                
+            
+
+            <!-- Edit Modal -->
+            <div id="edit-modal" class="edit-modal">
+              <div class="modal-content">
+                <span id="close-modal" class="close-modal">&times;</span>
+                <h2>Profili Düzenle</h2>
+                <div id="edit-first-name-container" class="edit-container">
+                  <label>Ad:</label>
+                  <input type="text" id="edit-first-name">
+                  
+                </div>
+                <div id="edit-last-name-container" class="edit-container">
+                  <label>Soyad:</label>
+                  <input type="text" id="edit-last-name">
+                </div>
+                <div id="edit-profile-photo-container" class="edit-container">
+                  <label>Fotoğraf:</label>
+                  <div class="file-container">
+                    <span id="edit-profile-photo-name">Yok</span>
+                    <input type="file" id="edit-profile-photo">
+                  </div>
+                </div>
+                <button id="save-btn">Değişiklikleri Kaydet</button>
+              </div>
+            </div>
+          </div>
+          
+            <footer class="footer">
+              <div class="footer-content">
+                  <p>© 2025 Web Craft. Tüm hakları saklıdır.</p>
+                  <div class="footer-links">
+                      <a href="index.html">Ana Sayfa</a>
+                      <a href="recent-contents.html">En Son İçerikler</a>
+                      <a href="popular.html">Popüler İçerikler</a>
+                      <a href="privacy-policy.html">Gizlilik Politikası</a>
+                      <a href="terms-of-use.html">Kullanım Şartları</a>
+                  </div>
+              </div>
+          </footer>
+
+    </div>
+
+
+    <!-- JavaScript Dosyası -->
+    <script src="js/navbar.js" defer></script>
+    <script src="js/account.js" defer></script>
+    <script src="js/account-tab.js" defer></script>
+    <script src="js/user-content.js" defer></script>
+    <script src="js/user-likes.js" defer></script>
+    <script src="js/user-comments.js" defer></script>
+    <script src="js/user-statistic.js" defer></script>
+    <script src="js/toast.js" defer></script>
+    <script src="js/logout.js" defer></script>
+
+    <!-- Toast Bildirimi -->
+    <div id="toast" class="toast"></div>
+  </body>
+</html>

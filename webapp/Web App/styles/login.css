@@ -1,0 +1,270 @@
+
+.main-login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(to right,  #353536, #eff2f5);
+  background-image: url('/images/login-3.jpg'); 
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: 1;
+}
+
+/* Glass Container */
+.main-login .glass-container {
+  width: 500px;
+  height: 350px;
+  position: relative;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.9);
+  border-radius: 10px;
+  
+}
+
+/* Blur Efekti */
+.main-login .glass-container::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(5px);
+  z-index: -1;
+}
+
+/* Login Box */
+.main-login .login-box {
+  max-width: 250px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.main-login h2 {
+  color: #ffffff;
+  margin-top: 30px;
+  margin-bottom: -20px;
+  font-family: 'Monospace', Lucida; 
+}
+
+.main-login form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.main-login form input {
+  padding: 10px;
+  margin-top: 25px;
+  border: none;
+  border-radius: 10px;
+  background: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+  font-size: 13px;
+  font-family: 'Monospace', Lucida; 
+}
+
+.main-login form input::placeholder {
+  color: #fff;
+  font-size: 10px;
+}
+
+.main-login form input:focus {
+  outline: none;
+}
+
+
+/* Checkbox */
+.main-login .options {
+  display: flex;
+  
+  align-items: center;
+  margin-top: 14px;
+  font-size: 11px;
+  color: white;
+  font-family: 'Monospace', Lucida; 
+}
+
+.main-login .options input {
+  margin-right: 5px;
+  margin-top: 0px;
+  
+}
+
+.main-login .options a {
+  text-decoration: none;
+  color: white;
+  margin-left: auto;
+  font-family: 'Monospace', Lucida; 
+}
+
+.options input[type="checkbox"] {
+  width: 12px;
+  height: 12px;
+  cursor: pointer;
+  accent-color: #000000; 
+  vertical-align: middle; /* Checkbox'ı metinle aynı hizaya getir */
+  font-family: 'Monospace', Lucida; 
+  
+}
+
+
+/* Buton*/
+
+.main-login button {
+  background: #000000;
+  color: rgb(255, 255, 255);
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 15px;
+  font-family: 'Monospace', Lucida; 
+}
+
+.main-login button:hover {
+  background: rgb(29, 28, 28);
+  color: #ffffff;;
+  outline: 1px solid #fff;
+}
+
+.main-login p {
+  font-size: 12px;
+  color: #fff;
+  margin-top: 15px;
+  font-family: 'Monospace', Lucida; 
+}
+
+.main-login #register {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  font-family: 'Monospace', Lucida; 
+}
+
+
+
+
+/* eye icon */
+
+.password-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.password-container input {
+  width: 100%;
+  padding-right: 40px; 
+}
+
+.toggle-password {
+  position: absolute;
+  right: 10px;
+  top: 55%; 
+  cursor: pointer;
+  filter: brightness(0) invert(1); 
+}
+
+.toggle-password img {
+  width: 20px;
+  height: 20px;
+}
+
+
+.error-message {
+  color: rgb(140, 37, 37); 
+  font-size: 10px; 
+  margin-top: 5px; 
+  display: block; 
+  text-align: left; 
+  width: 100%; 
+}
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+
+  .main-login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(to right, #353536, #eff2f5);
+  background-image: url('/images/login-3.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: 1;
+  padding: 20px;
+}
+
+ .main-login .glass-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit; 
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  z-index: -1;
+  }
+
+  .main-login .glass-container {
+  width: 75%;
+  height: auto;
+  padding: 25px;
+  background: rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.9);
+  border-radius: 10px;
+  position: relative;
+  top: -90px; 
+  left: -10px;
+  z-index: 1;
+}
+
+  .main-login .login-box {
+    max-width: 100%;
+    padding: 20px;
+  }
+
+  .main-login h2 {
+    font-size: 1.7rem;
+    margin-top: 20px;
+  }
+
+  .main-login form input {
+    font-size: 15px;
+    padding: 12px;
+  }
+
+  .main-login button {
+    padding: 12px;
+    font-size: 15px;
+  }
+
+  .main-login .options {
+    font-size: 14px;
+  }
+
+  .main-login p {
+    font-size: 14px;
+  }
+}
+
+

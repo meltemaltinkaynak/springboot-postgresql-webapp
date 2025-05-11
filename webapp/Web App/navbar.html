@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="styles/navbar.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+
+        <div class="hamburger-menu" id="hamburger-menu" >
+            <img src="images/mobile-menu.png" alt="Menu Icon" class="menu-icon">
+        </div>
+
+        <div class="logo">
+            <a href="index.html">
+                <img src="images/logo2.png" alt="Web Craft Logo">
+                
+               <span>Web Craft</span>
+            </a>
+            
+        </div>
+
+       <div class="container">
+            <ul class="nav-links">
+                
+                    <li class=" anasayfa-link"><a href="index.html">Ana Sayfa</a></li>
+                    <li><a href="popular.html">Popüler İçerikler</a></li>
+                    <li class="dropdown">
+                        <a href="#">Kategoriler</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="category.html?category=webdesign">Web Tasarımı</a></li>
+                            <li class="dropdown">
+                                <a href="#">Web Geliştirme</a>
+                                <ul class="dropdown-submenu">
+                                    <li class="dropdown">
+                                        <a href="#">Frontend</a>
+                                        <ul class="dropdown-submenu">
+                                            <li><a href="category.html?category=html">HTML</a></li>
+                                            <li><a href="category.html?category=css">CSS</a></li>
+                                            <li><a href="category.html?category=javascript">JavaScript</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown">
+                                        <a href="#">Backend</a>
+                                        <ul class="dropdown-submenu">
+                                            <li><a href="category.html?category=veritabani">Veri Tabanı Yönetimi</a></li>
+                                            <li><a href="category.html?category=backendteknolojileri">Backend Teknolojileri</a></li>
+                                            <li><a href="category.html?category=api">API Geliştirme</a></li>
+                                            <li><a href="category.html?category=hosting">Sunucu ve Hosting</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a href="category.html?category=uiux">UI/UX</a></li>
+                            <li><a href="category.html?category=tasarimaraclari">Tasarım Araçları</a></li>
+                            <li><a href="category.html?category=webperformans">Web Performansı ve SEO</a></li>
+                            <li><a href="category.html?category=webguvenlik">Web Güvenliği</a></li>
+                        </ul>
+                    </li>
+                    
+                </ul>
+
+             
+
+            <!-- Kullanıcı Bilgileri -->
+            <div class="user-info" id="user-info" style="display: none;">
+                <div class="user-dropdown">
+                    <span id="user-name">Kullanıcı</span>
+                    <ul class="dropdown-menu">
+                        <li><a href="account.html">Profilim</a></li>                        
+                        <li><a href="settings.html">Hesap Ayarları</a></li>
+                        <li><a href="#" id="logout-link-desktop" class="logout-link" onclick="logout()">Çıkış Yap</a></li>
+                    </ul>
+                </div>
+                <a href="user.html" class="new-content-link">
+                    <button style="background: transparent; border: none;">
+                        <img src="images/notification.png" alt="Ara" class="notification-icon">
+                    </button>
+                </a>
+            </div>
+
+            
+
+            <!-- Giriş Yap & Kayıt Ol Butonları -->
+            <div class="auth-buttons" id="auth-buttons">
+                <a href="login.html" class="login-btn">Giriş Yap</a>
+                <a href="register.html" class="register-btn">Kayıt Ol</a>
+            </div>
+            </div>
+
+
+        
+
+            
+          
+            <div class="account-menu" id="account-menu" style="display: none;">
+                <img src="/images/account-icon.png" alt="Account Icon" class="mobile-account-icon" />
+
+            </div>
+    
+            <!-- Mobil Menü (Gizli Başlangıçta) -->
+            <div class="account-nav" id="account-nav">
+                
+                    <ul id="mobile-menu">
+                        
+                        <li><a href="account.html">Profilim</a></li>                        
+                        <li><a href="settings.html">Hesap Ayarları</a></li>
+                        <li><a href="#" id="logout-link-mobile" class="logout-link" onclick="logout()">Çıkış Yap</a></li>
+                    </ul>
+                
+            </div>
+            
+
+
+
+            
+    
+            <!-- Mobil Menü (Gizli Başlangıçta) -->
+            <div class="mobile-nav" id="mobile-nav">
+                <ul>
+                    <li class="anasayfa-link"><a href="index.html">Ana Sayfa</a></li>
+                    <li><a href="popular.html">Popüler İçerikler</a></li>
+                    <li class="dropdown">
+                        <a href="#">Kategoriler</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="category.html?category=webdesign">Web Tasarımı</a></li>
+                            <li class="dropdown">
+                                <a href="#">Web Geliştirme</a>
+                                <ul class="dropdown-submenu">
+                                    <li class="dropdown">
+                                        <a href="#">Frontend</a>
+                                        <ul class="dropdown-submenu">
+                                            <li><a href="category.html?category=html">HTML</a></li>
+                                            <li><a href="category.html?category=css">CSS</a></li>
+                                            <li><a href="category.html?category=javascript">JavaScript</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown">
+                                        <a href="#">Backend</a>
+                                        <ul class="dropdown-submenu">
+                                            <li><a href="category.html?category=veritabani">Veri Tabanı Yönetimi</a></li>
+                                            <li><a href="category.html?category=backendteknolojileri">Backend Teknolojileri</a></li>
+                                            <li><a href="category.html?category=api">API Geliştirme</a></li>
+                                            <li><a href="category.html?category=hosting">Sunucu ve Hosting</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a href="category.html?category=uiux">UI/UX</a></li>
+                            <li><a href="category.html?category=tasarimaraclari">Tasarım Araçları</a></li>
+                            <li><a href="category.html?category=webperformans">Web Performansı ve SEO</a></li>
+                            <li><a href="category.html?category=webguvenlik">Web Güvenliği</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="login.html" class="login-link">Giriş Yap</a></li>
+                    <li><a href="register.html" class="register-link">Kayıt Ol</a></li>
+                </ul>
+            </div>
+
+             
+            
+        
+
+    </nav>
+
+    <div id="overlay"></div>
+  
+
+   
+
+    <!-- JavaScript Dosyası -->
+    <script src="js/navbar.js" defer></script>
+    <script src="js/logout.js" defer></script>
+</body>
+</html>

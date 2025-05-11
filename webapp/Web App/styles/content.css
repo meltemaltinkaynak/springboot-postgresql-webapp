@@ -1,0 +1,414 @@
+
+body {
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  justify-content: flex-start;
+  margin: 0;
+  padding: 0;
+  font-family: 'Monospace', Lucida;
+  background: #ffffff;
+  height: 100%;
+}
+
+
+.content-container {
+  flex: 1;
+  width: 100%;
+  max-width: 1000px; 
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  background: rgba(255, 255, 255, 0.3); 
+  
+  
+  box-sizing: border-box;
+  margin-top: 60px; /* Navbar yüksekliği kadar boşluk  */
+  box-shadow: 0px 8px 48px rgba(0, 0, 0, 0.5); 
+}
+
+
+.content-date {
+  font-size: 12px;
+  color: #666;
+  margin-top: 10px;
+  font-family: 'Monospace', Lucida; 
+}
+.content-card {
+  background: white;
+  padding: 20px;
+  margin-bottom: 20px;
+  
+  box-shadow: 0px 8px 48px rgba(0, 0, 0, 0.5); 
+  transition: transform 0.3s ease-in-out;
+}
+
+.content-container h1 {
+  font-size: 1rem; 
+  color: #323131; 
+  margin-bottom: 20px; 
+  font-weight: bold; 
+  font-family: 'Monospace', Lucida; 
+  letter-spacing: 1px; 
+  padding: 2px 0; 
+}
+
+.content-container h3 {
+  font-size: 12px; 
+  color: #393939; 
+  font-family: 'Monospace', Lucida; 
+}
+
+
+
+.content-title {
+  color: #333;
+  font-size: 18px;
+  margin-bottom: 40px;
+  text-align: center; 
+  font-family: 'Monospace', Lucida; 
+ 
+   
+}
+.content-title a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s;
+  
+}
+
+
+.content-title a:hover {
+  color: #000000;
+}
+
+
+.content-image {
+  width: 80%; 
+  height: 300px; 
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  margin-bottom: 40px;
+
+ 
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+
+
+.content-text {
+  margin: 15px 0;
+  line-height: 1.8;
+  font-size: 12px;
+  color: #333333;
+  display: inline-block;
+  max-width: 100%;
+  word-wrap: break-word;
+  font-weight: normal;
+  background-color: #f9f9f9;
+  padding: 10px;
+  font-family: 'Monospace', Lucida; 
+  border-radius: 5px;
+  text-align: justify;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+  letter-spacing: 0.5px;
+}
+
+
+.content-category,
+.content-author {
+  font-size: 10px;
+  font-family: 'Monospace', Lucida; 
+  color: #666;
+}
+
+
+/* like yorum */
+
+.content-actions {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+  
+}
+
+
+.comment-btn{
+  background: linear-gradient(45deg, #545579, #4e5f71);
+  padding: 10px 25px; 
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 0.75rem; 
+  font-family: 'Monospace', Lucida; 
+  cursor: pointer;
+  transition: background 0.3s ease-in-out, transform 0.3s ease-in-out;
+  display: inline-flex; 
+  align-items: center;
+  gap: 3px; 
+  height: auto; 
+}
+
+/* Normal durumda buton */
+.like-btn {
+  background: linear-gradient(45deg, #37374f, #4e5f71); 
+  color: #fff;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 5px;
+  font-size: 0.75rem;
+  font-family: 'Monospace', Lucida; 
+  cursor: pointer;
+  transition: background 0.3s ease-in-out, transform 0.3s ease-in-out;
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  height: auto;
+}
+
+/* Beğeni yapılmış durumda buton */
+.like-btn.liked {
+  background: linear-gradient(45deg, #c08c8c, #e56060); 
+  color: #fff;
+}
+.like-btn i,
+.comment-btn i {
+  font-size: 1rem;
+  
+}
+
+.like-btn span,
+.comment-btn span {
+  font-size: 0.75rem; 
+}
+
+.like-btn:hover,
+.comment-btn:hover {
+  background: linear-gradient(45deg, #4e5f71, #575875);
+  
+}
+
+
+/* Yorumları göstermek için sekme animasyonu */
+.comment-section {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.comment-section.show {
+  display: block;
+  opacity: 1;
+}
+
+/* Yorum kart  */
+.comment-card {
+  background: #e1dfdf;
+  padding: 8px;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  font-size: 1rem;
+  font-family: 'Monospace', Lucida; 
+  color: #333;
+  border: 1px solid #ccc; 
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
+}
+
+.comment-author {
+  font-weight: bold;
+  color: #333333;
+  font-size: 12px;
+  font-family: 'Monospace', Lucida; 
+}
+
+.comment-text {
+  margin-top: 5px;
+  color: #333333;
+  font-size: 12px;
+  font-family: 'Monospace', Lucida; 
+}
+
+.comment-date {
+  font-size: 10px;
+  color: #3e3d3d;
+  margin-top: 10px;
+  font-family: 'Monospace', Lucida; 
+}
+
+
+
+/* Yorumlar metni */
+textarea {
+  width: 98%;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 12px;
+  font-family: 'Monospace', Lucida; 
+  color: #333;
+}
+
+/* Placeholder  */
+textarea::placeholder {
+  color: #aaa; 
+  font-style: italic; 
+  font-size: 12px; 
+}
+
+.submit-comment {
+  background: rgb(62, 62, 62);
+  color: rgb(255, 255, 255);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  font-size: 10px; 
+  
+}
+
+.submit-comment:hover {
+  background:  #444;
+}
+
+
+
+/* Beğeni Kartı */
+.like-card {
+  background: #e1dfdf;
+  padding: 8px;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  font-size: 1rem;
+  color: #333;
+  border: 1px solid #ccc; 
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
+}
+
+.like-author {
+  font-weight: bold;
+  color: #333333;
+  font-size: 12px;
+  font-family: 'Monospace', Lucida; 
+}
+.like-time {
+  font-size: 10px;
+  color: #3e3d3d;
+  margin-top: 10px;
+}
+
+.like-card p {
+  margin: 5px 0;
+  font-size: 10px;
+  font-family: 'Monospace', Lucida; 
+}
+
+.likes-section {
+  margin-top: 20px;
+  display: none;
+}
+
+
+
+
+/* Beğenileri gör ve Yorumları gör linkleri */
+.content-likes,
+.view-comments-section {
+  display: inline-block;
+  margin-right: 25px;
+  margin-left: 18px;
+  gap: 30px;
+  margin-top: 7px;
+}
+
+.content-likes .view-likes,
+.view-comments-section .view-comments-link {
+  font-size: 10px;
+  color: #4e5f71;
+  text-decoration: none; 
+  font-family: 'Monospace', Lucida; 
+  padding-bottom: 2px; 
+}
+
+
+.view-comments-section {
+  text-align: left; 
+}
+
+
+
+
+
+
+@media (max-width: 768px) {
+  .content-container {
+    width: calc(100% - 50px); 
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 15px;
+    margin-top: 80px;
+  }
+
+  .content-title {
+    font-size: 12px;
+  }
+
+  .content-card {
+    padding: 18px;
+  }
+
+  .content-actions {
+    gap: 12px;
+  }
+
+  .like-btn,
+  .comment-btn,
+  .submit-comment {
+    font-size: 1rem;
+    padding: 9px 18px;
+  }
+
+  .content-likes,
+  .view-comments-section {
+    
+    display: inline-block; 
+    margin-right: 8px; 
+    margin-left: 8px;
+    gap: 30px;
+  }
+
+ 
+  .content-likes .view-likes,
+  .view-comments-section .view-comments-link {
+    font-size: 12px;
+  }
+
+  textarea {
+    width: 90%; 
+    font-size: 14px; 
+    padding: 12px; 
+    margin-top: 8px; 
+  }
+
+  .content-image {
+    width: 80%; 
+    height: 80%; 
+    object-fit: contain; 
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); 
+    margin-bottom: 40px;
+  
+   
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+
+}

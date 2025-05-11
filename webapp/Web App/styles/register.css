@@ -1,0 +1,180 @@
+
+.main-register {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(to right,  #353536, #eff2f5);
+  background-image:  url('/images/login-3.jpg'); 
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: 1;
+}
+
+/* Glass Container */
+.main-register .glass-container {
+  width: 400px;
+  height: 450px;
+  position: relative;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.9);
+  border-radius: 10px;
+  
+}
+
+.main-register .glass-container::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  z-index: -1;
+}
+
+/* Register Box */
+.main-register .register-box {
+  max-width: 250px;
+  margin: 0 auto;
+  text-align: center;
+  
+}
+
+.main-register h2 {
+  color: #fff;
+  margin-top: 30px;
+  margin-bottom: -20px;
+  font-family: 'Monospace', Lucida; 
+}
+
+.main-register form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.main-register form input {
+  padding: 10px;
+  margin-top: 15px;
+  border: none;
+  border-radius: 10px;
+  background: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+  font-size: 13px;
+  font-family: 'Monospace', Lucida; 
+}
+
+.main-register form input::placeholder {
+  color: #fff;
+  font-size: 10px;
+}
+
+.main-register form input:focus {
+  outline: none;
+}
+
+.main-register button {
+  background: #000000;
+  color: rgb(255, 255, 255);
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 15px;
+  font-family: 'Monospace', Lucida; 
+}
+
+.main-register button:hover {
+  background: rgb(29, 28, 28);
+  color: #ffffff;;
+  outline: 1px solid #fff;
+}
+
+.main-register p {
+  font-size: 12px;
+  color: #fff;
+  margin-top: 15px;
+  font-family: 'Monospace', Lucida; 
+}
+
+.main-register #login {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  font-family: 'Monospace', Lucida; 
+}
+
+
+/* Mobile Devices (375px and below) */
+@media (max-width: 375px) {
+  .main-register .glass-container {
+    width: 80%;
+    height: 500px;
+  }
+
+  .main-register .register-box {
+    max-width: 100%;
+    padding: 15px;
+  }
+
+  .main-register h2 {
+    font-size: 1.5rem;
+    margin-top: 15px;
+  }
+
+  .main-register form input {
+    font-size: 14px;
+    padding: 12px;
+  }
+
+  .main-register button {
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  .main-register p {
+    font-size: 14px;
+  }
+}
+
+/* Tablet Devices (768px and below) */
+@media (max-width: 768px) {
+  .main-register .glass-container {
+    width: 80%;
+    height: 500px;
+  }
+
+  .main-register .register-box {
+    max-width: 100%;
+    padding: 20px;
+  }
+
+  .main-register h2 {
+    font-size: 1.7rem;
+    margin-top: 20px;
+  }
+
+  .main-register form input {
+    font-size: 15px;
+    padding: 12px;
+  }
+
+  .main-register button {
+    padding: 12px;
+    font-size: 15px;
+  }
+
+  .main-register p {
+    font-size: 14px;
+  }
+}
+
+
+
+
+

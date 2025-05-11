@@ -1,0 +1,163 @@
+body {
+  background-color: white !important;
+}
+
+
+.recentfour {
+  padding: 10px;
+  margin: 0 auto;
+  width: 80%;
+  box-sizing: border-box;
+  overflow: hidden;
+  margin-top: 80px; 
+}
+
+
+
+.content-heading {
+  font-size: 20px;
+  font-family: 'Monospace', Lucida; 
+  font-weight: bold;
+  color: #555;
+  margin-top: 40px;
+  
+  border-bottom: 2px solid #f39c12;
+  padding-bottom: 10px;
+  
+}
+
+
+
+.content-container {
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 10px;
+  display: flex;
+  flex-direction: column; 
+  gap: 40px; 
+  justify-content: center;
+}
+
+.content-card {
+  width: 80%; 
+  
+  background-color: transparent;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+  margin-bottom: 1px;
+  border: 1px solid #ffffff; 
+  
+  padding: 24px; 
+  box-shadow: 0px 8px 48px rgba(0, 0, 0, 0.5);
+  margin: 0 auto; 
+  
+  height: 400px; 
+}
+
+.content-title {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+  
+}
+
+.content-title a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s;
+}
+
+.content-title a:hover {
+  color: #000000;
+}
+
+.content-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 0px;
+  background-image: url('/images/login-3.jpg'); 
+}
+
+.content-text {
+  padding: 0px;
+  font-size: 12px;
+  color: #555;
+  line-height: 1.4;
+  height: 100px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.content-meta {
+  font-size: 10px;
+  color: #888;
+  padding-right: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 25px;
+}
+
+.content-meta a {
+  color: #555;
+  text-decoration: none;
+}
+
+.content-author {
+  font-size: 12px;           
+  color: #6c6b6b;           
+    
+         
+  }
+
+.content-container .content-card {
+  margin-bottom: 20px;
+}
+
+
+@media (max-width: 768px) {
+  .recentfour {
+    width: 95%;
+    padding: 5px;
+    margin-top: 60px;
+  }
+
+  .content-card {
+    width: 80%;
+    height: auto;
+    padding: 16px;
+  }
+
+  .content-image {
+    height: 150px;
+  }
+
+  .content-title {
+    font-size: 14px;
+    margin-bottom: 12px;
+  }
+
+  .content-text {
+    font-size: 11px;
+    height: auto;
+    max-height: 120px;
+  }
+
+  .content-meta {
+    font-size: 9px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+
+  .content-author {
+    font-size: 11px;
+  }
+
+  .content-heading {
+    font-size: 18px;
+    padding-bottom: 8px;
+  }
+}

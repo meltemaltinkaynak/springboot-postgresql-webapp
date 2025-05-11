@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/logo2.png" type="image/png">
+
+    <title>Popüler İçerikler </title>
+
+    <link rel="stylesheet" href="styles/navbar.css">  
+    <link rel="stylesheet" href="styles/popular.css">    
+    
+    <link rel="stylesheet" href="styles/toast.css">
+    <link rel="stylesheet" href="styles/footer.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+</head>
+<body>
+
+    <!-- Navbar  -->
+    <div id="navbar-container"></div>
+
+
+
+
+    <div class="wrapper">
+
+
+
+            <!-- Popüler İçerikler -->
+            <section id="popular">
+                <h1 class="content-heading">Popüler İçerikler</h1>
+        
+                <div class="tabs">
+                <button class="tab-button active" data-tab="top10">TOP 10</button>
+                <button class="tab-button" data-tab="likes">En Çok Beğenilenler</button>
+                <button class="tab-button" data-tab="comments">En Çok Yorum Alanlar</button>
+                <button class="tab-button" data-tab="views">En Çok Görüntülenenler</button>
+                </div>
+        
+                <div id="top10" class="tab-content active">
+                <!-- En çok etkileşim alan ilk 10 içerik buraya gelecek -->
+                <div class="content-container"></div>
+                <!-- Diğer içerikler -->
+                </div>
+        
+                <div id="likes" class="tab-content">
+                <!-- En çok beğenilen ilk 10 içerik -->
+                <div class="content-container"></div>
+                </div>
+        
+                <div id="comments" class="tab-content">
+                <!-- En çok yorum alan ilk 10 içerik -->
+                <div class="content-container"></div>
+                </div>
+        
+                <div id="views" class="tab-content">
+                <!-- En çok görüntülenen ilk 10 içerik -->
+                <div class="content-container"></div>
+                </div>
+            </section>
+
+            <footer class="footer">
+                <div class="footer-content">
+                    <p>© 2025 Web Craft. Tüm hakları saklıdır.</p>
+                    <div class="footer-links">
+                        <a href="index.html">Ana Sayfa</a>
+                        <a href="recent-contents.html">En Son İçerikler</a>
+                        <a href="popular.html">Popüler İçerikler</a>
+                        <a href="privacy-policy.html">Gizlilik Politikası</a>
+                        <a href="terms-of-use.html">Kullanım Şartları</a>
+                    </div>
+                </div>
+            </footer>
+    </div>
+
+    
+
+    <!-- JavaScript Dosyası -->
+    <script src="js/navbar.js" defer></script>
+    <script src="js/popular-tab.js" defer></script>
+    <script src="js/popular.js" defer></script> 
+    <script src="js/toast.js"></script>
+    <script src="js/logout.js" defer></script>
+
+    <!-- Toast Bildirimi -->
+    <div id="toast" class="toast"></div>
+
+ 
+    
+
+   
+
+</body>
+</html>

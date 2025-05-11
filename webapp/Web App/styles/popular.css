@@ -1,0 +1,272 @@
+body {
+  background-color: white !important;
+}
+
+#popular {
+  padding: 10px;
+  margin: 0 auto;
+  width: 80%;
+  box-sizing: border-box;
+  overflow: hidden;
+  margin-top: 80px;
+  
+}
+
+.content-heading {
+  font-size: 20px;
+  font-family: 'Monospace', Lucida;
+  font-weight: bold;
+  color: #555;
+  margin-top: 40px;
+  border-bottom: 2px solid #f39c12;
+  padding-bottom: 10px;
+  
+}
+
+.tabs {
+  display: flex;
+  gap: 10px;
+  margin-top: 40px;
+ 
+  padding-bottom: 5px;
+  flex-wrap: wrap;
+  justify-content: center;
+  
+}
+
+.tab-button {
+  padding: 10px 25px;
+  background-color: #ffffff;
+  border: 0.2px solid  #ffffff;
+  cursor: pointer;
+  font-weight: 600;
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+.tab-button:hover {
+  background-color: #e5e7eb;
+}
+
+.tab-button.active {
+  background-color: #747474;
+  color: #fffdfd;
+  border-bottom: 2px solid  #5b5959;
+  
+}
+
+.tab-content {
+  display: none;
+  padding: 25px;
+ 
+  border-top: none;
+  animation: fadeIn 0.3s ease-in-out;
+  
+  
+}
+
+
+.tab-content.active {
+  display: block;
+}
+
+.popular-item {
+  padding: 15px;
+  border-bottom: 1px solid #eee;
+  font-size: 16px;
+  color: #444;
+  transition: background-color 0.2s ease;
+  border-radius: 6px;
+}
+
+.popular-item:hover {
+  background-color: #f9fafb;
+}
+
+/* Fade-in animasyonu */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(6px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+.content-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  padding-top: 10px;
+}
+
+.content-card {
+  position: relative;
+  
+  display: flex;
+  flex-direction: row;
+  padding: 20px;
+  border: 1px solid #ddd;
+  
+  margin-bottom: 20px;
+  width: 100%;
+  background-color: #fff;
+  align-items: flex-start;
+  box-sizing: border-box;
+  box-shadow: 0px 8px 32px rgba(0, 0, 0, 0.5); 
+  
+}
+
+.content-rank {
+  font-size: 36px;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  width: 100px;
+ 
+  margin-right: 15px;
+  align-self: center; 
+  
+  
+  
+}
+
+.content-title {
+  font-size: 18px;
+  
+  color: #333;
+  margin-top: 15px;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+}
+
+.content-title .restricted-label {
+  font-size: 12px;
+  color: #440303; /* Kısıtlı içerik için kırmızı renk */
+  margin-top: 5px;
+  font-weight: normal;
+}
+
+
+.content-title .meta-info {
+  font-size: 12px;
+  color: #000000; 
+  margin-top: 5px;
+  font-weight: normal;
+  display: inline-flex;
+  align-items: center;
+  margin-right: 10px;
+  
+}
+
+.meta-info:nth-child(1),
+.meta-info:nth-child(2),
+.meta-info:nth-child(3) {
+    margin-top: 20px; 
+}
+
+
+
+
+.content-title a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s;
+}
+
+.content-title a:hover {
+  color: #000000;
+}
+
+.content-image {
+  width: 200px;
+  height: 150px;
+  border-radius: 10px;
+  margin-right: 20px;
+  background-image: url('/images/login-3.jpg'); 
+}
+
+.content-text {
+  padding: 0px;
+  font-size: 12px;
+  color: #555;
+  line-height: 1.4;
+  height: 54px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+
+.content-container .content-card {
+  margin-bottom: 20px;
+}
+
+.icon {
+  width: 20px;  
+  height: auto; 
+  margin-right: 5px; 
+}
+
+
+/* Mobil uyumlu */
+@media (max-width: 768px) {
+  #popular {
+    width: 95%;
+    margin-top: 60px;
+  }
+
+  .content-heading {
+    font-size: 18px;
+    margin-top: 30px;
+  }
+
+  .tabs {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .tab-button {
+    padding: 8px 15px;
+    font-size: 14px;
+  }
+
+  .content-card {
+    flex-direction: column;
+    padding: 15px;
+  }
+
+  .content-rank {
+    font-size: 28px;
+    width: 80px;
+    margin-bottom: 15px;
+  }
+
+  .content-title {
+    font-size: 16px;
+  }
+
+  .content-title .restricted-label {
+    font-size: 10px;
+  }
+
+  .content-title .meta-info {
+    font-size: 10px;
+    
+  }
+
+  .content-image {
+    width: 100%;
+    height: 120px;
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+
+  .content-text {
+    font-size: 11px;
+  }
+}

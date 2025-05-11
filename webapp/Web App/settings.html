@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/logo2.png" type="image/png">
+
+    <title>Ayarlar </title>
+
+    <link rel="stylesheet" href="styles/navbar.css">  
+    <link rel="stylesheet" href="styles/settings.css">  
+     
+    
+    <link rel="stylesheet" href="styles/toast.css">
+    <link rel="stylesheet" href="styles/footer.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+</head>
+<body>
+
+    <!-- Navbar  -->
+    <div id="navbar-container"></div>
+
+
+
+
+    <div class="wrapper">
+
+      <div class="settings">
+              <!-- Profile Container -->
+              <div class="settings-page">
+                    <h1 class="heading">Ayarlar</h1>
+                
+                          <div class="settings">
+                            <div class="tab-buttons">
+                              <button class="sub-tab-button active" data-subtab="account-info">Hesap Bilgileri</button>
+                              <button class="sub-tab-button" data-subtab="password">Şifre Değiştirme</button>
+                              <button class="sub-tab-button" data-subtab="delete">Hesabı sil / devre dışı bırak</button>
+                              <button class="tab-button" data-tab="privacy-security"> Gizlilik ve Güvenlik</button>
+                              
+                            </div>   
+                            
+                            <div id="account-info" class="tab-content">
+                              <h1 class="title">Hesap Bilgilerini Güncelle</h1>
+
+                              <div id="edit-" class="edit">
+                                  <div class="content">
+                                    
+                                  
+                                    <div id="edit-first-name-container" class="edit-container">
+                                      <label>Ad:</label>
+                                      <input type="text" id="edit-first-name">
+                                      
+                                    </div>
+                                    <div id="edit-last-name-container" class="edit-container">
+                                      <label>Soyad:</label>
+                                      <input type="text" id="edit-last-name">
+                                    </div>
+                                    
+                                    <div id="edit-profile-photo-container" class="edit-container">
+                                      <label>Fotoğraf:</label>
+                                      <div class="file-container">
+                                        <span id="edit-profile-photo-name">Yok</span>
+                                        <input type="file" id="edit-profile-photo">
+                                      </div>
+                                    </div>
+                                    <div class="info" id="email-container">
+                                      <span>E-mail:</span> <span id="email"></span>
+                                    </div>
+                                    <div class="info" id="created-at-container">
+                                      <span>Hesap Oluşturulma Tarihi:</span> <span id="created-at"></span>
+                                    </div>
+                                    <div class="info" id="user-role-container">
+                                      <span>Role:</span> <span id="user-role"></span>
+                                    </div>
+                                    <button id="save-btn">Değişiklikleri Kaydet</button>
+                                  </div>
+                              </div>
+                              
+
+                            </div>
+                          
+                            <div id="password"class="tab-content">
+                              <h1 class="title">Şifreni Değiştir</h1>
+
+                              <div id="password-edit" class="password-edit">
+                                <div class="content">
+                                  
+                                
+                                  <div id="current-password-container" class="password-container">
+                                    <label>Mevcut Şifreniz:</label>
+                                    <div class="input-wrapper">
+                                      <input type="password" id="current-password">
+                                      <img src="images/eye.png"  class="toggle-password" data-target="current-password">
+                                    </div>
+                                  </div>
+                                  
+                                  <div id="new-password-container" class="password-container">
+                                    <label>Yeni Şifreniz:</label>
+                                    <div class="input-wrapper">
+                                      <input type="password" id="new-password">
+                                      <img src="images/eye.png" class="toggle-password" data-target="new-password">
+                                    </div>
+                                  </div>
+                                  
+                                  <div id="new2-password-container" class="password-container">
+                                    <label>Yeni Şifrenizi Tekrar Giriniz:</label>
+                                    <div class="input-wrapper">
+                                      <input type="password" id="new2-password">
+                                      <img src="images/eye.png" class="toggle-password" data-target="new2-password">
+                                    </div>
+                                  </div>
+                                  
+                                  
+                                  <button id="update-btn">Şifreni değiştir </button>
+                                </div>
+                            </div>
+                              
+
+                            </div>
+                          
+                            <div id="delete" class="tab-content">
+                              <h1 class="title">Hesabını Sil/Devre Dışı Bırak</h1>
+                              <p class="description">
+                                Aşağıdaki seçenekleri kullanarak hesabınızı kalıcı olarak silebilir veya geçici olarak devre dışı bırakabilirsiniz.
+                                Lütfen her iki seçeneğin etkilerini dikkatlice inceleyin.
+                              </p>
+
+                              <div class="account-actions">
+                                <div class="action-box">
+                                  <h3>Hesabımı Devre Dışı Bırak</h3>
+                                  <p>
+                                    Bu seçenek hesabınızı geçici olarak devre dışı bırakır. Hesabınız görünmez hale gelir, ancak verileriniz korunur ve
+                                    daha sonra tekrar etkinleştirebilirsiniz.
+                                  </p>
+                                  <button id="deactivateAccountBtn">Hesabımı Devre Dışı Bırak</button>
+                                </div>
+
+                                <div class="action-box">
+                                  <h3>Hesabımı  Sil</h3>
+                                  <p>
+                                    Bu işlem sonucunda hesabınız ve isteğe bağlı olarak tüm içerikleriniz sistemden geri dönülmeyecek şekilde silinir.
+                                    İşlem geri alınamaz.
+                                  </p>
+                                  <button id="deleteAccountBtn">Hesabımı Sil</button>
+                                </div>
+
+                              
+                              </div>
+                              
+                            </div>
+                            
+                            <!-- Modal -->
+                            <div id="deleteModal" class="modal">
+                              <div class="modal-content">
+                                <h2>Hesabınızı kalıcı olarak silmek istediğinizden emin misiniz?</h2>
+                                <p >
+                                  Bu işlemi onayladığınız takdirde, kullanıcı hesabınız sistemden kalıcı olarak silinecektir. Bu işlem geri alınamaz. Ayrıca, aşağıdaki seçeneği işaretlemeniz durumunda hesabınıza ait tüm içerikler, beğeniler ve yorumlar da sistemden geri getirilemeyecek şekilde silinecektir. Lütfen bu işlemi gerçekleştirmeden önce kararınızı dikkatlice gözden geçiriniz.
+                                </p>
+                                
+                                <div class="toggle-container">
+                                  <span>Hesabıma ait tüm içerikler, beğeniler ve yorumlar da sistemden kalıcı olarak silinsin.</span>
+                                  <label class="switch">
+                                    <input type="checkbox" id="deleteToggle">
+                                    <span class="slider round"></span>
+                                  </label>
+                                  
+                                </div>
+                            
+                                <div class="button-group">
+                                  <button id="cancelDeleteBtn">Vazgeç</button>
+                                  <button id="finalDeleteBtn">Hesabımı Kalıcı Olarak Sil</button>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div id="deactivateModal" class="modal">
+                              <div class="modal-content">
+                                <h2>Hesabınızı geçici olarak devre dışı bırakmak istediğinizden emin misiniz?</h2>
+                                <p>
+                                  Bu işlemi onayladığınızda, hesabınız geçici olarak devre dışı bırakılacaktır. Tüm verileriniz korunacaktır. Hesabınızı giriş yaparak tekrar etkinleştirebilirsiniz.
+                                </p>
+
+                                <div class="button-group">
+                                  <button id="cancelDeactivateBtn">Vazgeç</button>
+                                  <button id="finalDeactivateBtn">Hesabımı Devre Dışı Bırak</button>
+                                </div>
+                              </div>
+                            </div>
+
+                          
+                          
+                          
+                            
+
+                            <!-- Gizlilik ve Güvenlik -->
+                            
+                            <div id="privacy-security" class="tab-content">
+                              <h1 class="title">Gizlilik ve Güvenlik</h1>
+                              <div class="action-box">
+                                <h3>Oturumları Yönet</h3>
+                                <p>Hesabınızla ilişkili tüm oturumları burada görüntüleyebilirr ve her bir oturumu güvenli bir şekilde sonlandırabilirsiniz. Oturmlarınızı görmek için:</p>
+                                <button id="manageSessionsBtn">Oturumları Yönet</button>
+                              </div>
+                                <!-- Modal for managing sessions -->
+                                <div id="manageSessionsModal" class="modal">
+                                    <div class="modal-content">
+                                        <span id="close-modal" class="close-modal">&times;</span>
+                                        <h2>Oturumlar</h2>
+                                        <ul id="sessionsList">
+                                            
+                                            <li>
+                                                <p><strong>IP:</strong> </p>
+                                                <p><strong>Cihaz:</strong> </p>
+                                                <p><strong>Giriş Zamanı:</strong> </p>
+                                                <p><strong>Oturum Durumu:</strong> </p>
+                                                <button class="terminateSessionBtn"></button>
+                                            </li>
+                                          
+                                        </ul>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+
+                          </div>
+                  
+              </div>
+          </div>
+
+
+
+
+            <footer class="footer">
+                <div class="footer-content">
+                    <p>© 2025 Web Craft. Tüm hakları saklıdır.</p>
+                    <div class="footer-links">
+                        <a href="index.html">Ana Sayfa</a>
+                        <a href="recent-contents.html">En Son İçerikler</a>
+                        <a href="popular.html">Popüler İçerikler</a>
+                        <a href="privacy-policy.html">Gizlilik Politikası</a>
+                        <a href="terms-of-use.html">Kullanım Şartları</a>
+                    </div>
+                </div>
+            </footer>
+      </div>
+    </div>
+
+    
+
+    <!-- JavaScript Dosyası -->
+    <script src="js/navbar.js" defer></script>
+    <script src="js/settings-tab.js" defer></script>
+    <script src="js/settings.js" defer></script>
+    <script src="js/change-password.js" defer></script>
+    <script src="js/delete-account.js" defer></script>
+    <script src="js/deactivate-account.js" defer></script>
+    <script src="js/privacy.js" defer></script>
+    
+    <script src="js/toast.js"></script>
+    <script src="js/logout.js" defer></script>
+
+    <!-- Toast Bildirimi -->
+    <div id="toast" class="toast"></div>
+
+ 
+    
+
+   
+
+</body>
+</html>

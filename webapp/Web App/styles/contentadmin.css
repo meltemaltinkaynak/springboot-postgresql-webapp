@@ -1,0 +1,79 @@
+
+.panel-container {
+  display: flex;
+  justify-content: center; 
+  align-items: flex-start; 
+  min-height: 100vh; 
+  padding: 20px; 
+  background-color: #525152;
+}
+
+.panel {
+  width: 100%;
+  max-width: 800px; 
+  background-color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* Başlık kısmı */
+.panel-header {
+  background-color: #638cd3;
+  color: rgb(4, 4, 4);
+  padding: 20px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  border-radius: 10px;
+}
+
+/* İçerik bölümü */
+.content {
+  padding: 20px;
+}
+
+.content h2 {
+  font-size: 22px;
+  font-weight: 600;
+  color: #333;
+}
+
+.content .link {
+  display: block;
+  padding: 10px;
+  background-color: #f7f9fc;
+  color: #333;
+  text-decoration: none;
+  border-radius: 5px;
+  margin: 10px 0;
+  transition: all 0.3s ease;
+}
+
+.content .link:hover {
+  background-color: #4e73df;
+  color: white;
+  transform: scale(1.05); 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+@media (max-width: 768px) {
+  .panel {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .menu a {
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  .content .link {
+    padding: 8px;
+    font-size: 14px;
+  }
+}
