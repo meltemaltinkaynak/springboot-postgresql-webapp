@@ -85,54 +85,192 @@ Aşağıda `application.properties` dosyasında kullanılan temel yapılandırma
 ![](webapp/images/like.png)
 
 
-##  Arayüz
-#### navbar:
-![](webapp/images/navbar.png)
+# Arayüz Görselleri
+## Misafir Kullanıcı
+### Anasayfa
+![](webapp/images/anasayfa1.png)
 
-![](webapp/images/menu.png)
+![](webapp/images/anasayfa1-mobile.png)
 
-![](webapp/images/menu2.png)
+![](webapp/images/anasayfa2.png)
 
-![](webapp/images/login-navbar.png)
+![](webapp/images/anasayfa2-mobile.png)
 
-![](webapp/images/navbar2.png)
+![](webapp/images/anasayfa3.png)
 
+![](webapp/images/anasayfa3-mobile.png)
 
-#### login:
-![](webapp/images/login.png)
+![](webapp/images/anasayfa4.png)
 
-![](webapp/images/login2.png)
+![](webapp/images/anasayfa4-mobile.png)
 
-#### register:
-![](webapp/images/register.png)
+![](webapp/images/anasayfa4-mobile2.png)
 
-#### toast-message:
-![](webapp/images/toast.png)
+![](webapp/images/anasayfa5.png)
 
-![](webapp/images/toastt.png)
+![](webapp/images/anasayfa5_1.png)
 
+![](webapp/images/anasayfa5-mobile.png)
 
+![](webapp/images/anasayfa5-mobile2.png)
 
+### Giriş
 
-#### içerik:
-![](webapp/images/kategori-content.png)
+![](webapp/images/giris1.png)
 
-![](webapp/images/content2.png)
+![](webapp/images/giris2.png)
 
-![](webapp/images/content-like.png)
-
-![](webapp/images/content-comment.png)
-
+![](webapp/images/giris1-mobile.png)
 
 
-#### profile:
-![](webapp/images/profile.png)
 
-![](webapp/images/user-comment.png)
+### Kayıt
 
-![](webapp/images/user-like.png)
+![](webapp/images/kayit1.png)
 
-![](webapp/images/user-statistic.png)
+![](webapp/images/kayit1-mobile.png)
+
+
+
+### Kategoriler
+
+![](webapp/images/kategori1.png)
+
+![](webapp/images/kategori1-mobile.png)
+
+### İçerik Detay
+
+![](webapp/images/icerikdetay1.png)
+
+![](webapp/images/icerikdetay1-mobile.png)
+
+![](webapp/images/icerikdetay2.png)
+
+![](webapp/images/icerikdetay2-mobile.png)
+
+![](webapp/images/icerikdetay3.png)
+
+### Son Eklenenler
+
+![](webapp/images/soneklenenler1.png)
+
+![](webapp/images/soneklenenler1-mobile.png)
+
+### Popüler İçerikler
+
+![](webapp/images/populer1.png)
+
+![](webapp/images/populer1-mobile.png)
+
+
+
+## Giriş Yapmış Kullanıcı
+### Anasayfa
+
+![](webapp/images/login-anasayfa.png)
+
+![](webapp/images/login-anasayfa-mobile.png)
+
+![](webapp/images/login-anasayfa-mobile1.png)
+
+![](webapp/images/login-anasayfa-mobile2.png)
+
+### Profil
+
+![](webapp/images/login-profil-icerik.png)
+
+![](webapp/images/ogin-profil-icerik-mobile.png)
+
+
+![](webapp/images/login-profil-hareket-begeni.png)
+
+![](webapp/images/ogin-profil-hareket-begeni-mobile.png)
+
+![](webapp/images/login-profil-hareket-yorum.png)
+
+![](webapp/images/ogin-profil-hareket-yorum-mobile.png)
+
+
+
+![](webapp/images/login-profil-istatistik.png)
+
+![](webapp/images/ogin-profil-icerik-istatistik.png)
+
+
+![](webapp/images/login-profili-guncelle.png)
+
+![](webapp/images/login-profiliguncelle-mobile.png)
+
+
+### Ayarlar
+
+![](webapp/images/login-ayarlar-hesap.png)
+
+![](webapp/images/login-ayarlar-hesap-mobile.png)
+
+![](webapp/images/login-ayarlar-sifre.png)
+
+![](webapp/images/login-ayarlar-sifre-mobile.png)
+
+
+![](webapp/images/login-ayarlar-sil1.png)
+
+![](webapp/images/login-ayarlar-sil1-mobile.png)
+
+![](webapp/images/login-ayarlar-sil2.png)
+
+![](webapp/images/login-ayarlar-sil2-mobile.png)
+
+![](webapp/images/login-ayarlar-sil3.png)
+
+![](webapp/images/login-ayarlar-sil3-mobile.png)
+
+
+
+![](webapp/images/login-ayarlar-oturum1.png)
+
+![](webapp/images/login-ayarlar-oturum1-mobile.png)
+
+![](webapp/images/login-ayarlar-oturum2.png)
+
+![](webapp/images/login-ayarlar-oturum2-mobile.png)
+
+
+### İçerik Detay
+
+![](webapp/images/login-icerikdetay1.png)
+
+![](webapp/images/login-icerikdetay1-mobile.png)
+
+![](webapp/images/login-icerikdetay2.png)
+
+![](webapp/images/login-icerikdetay3.png)
+
+![](webapp/images/login-icerikdetay3-mobile.png)
+
+![](webapp/images/login-icerikdetay4.png)
+
+
+### Toast Message
+
+![](webapp/images/toast-true.png)
+
+![](webapp/images/toast-false.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
